@@ -33,39 +33,97 @@ const page = () => {
 
       <Navbar />
       <Container>
+        <BlackOverlay />
         <HotelContent>
           <HotelImage>
             <Overlay>
               <OverlayContent>
                 <span
                   className={HeadingFont.className}
-                  style={{ fontSize: "70px" }}>
+                  style={{ fontSize: "70px", marginTop: "10px" }}>
                   Hotels
                 </span>
 
                 <p className={TextFont.className} style={{ fontSize: "20px" }}>
                   ASARA WINE ESTATE & HOTEL
                 </p>
+
+                <p className={TextFont.className}>
+                  Polkadraai Rd, Stellenbosch, 7600, Cape Town, South Africa
+                </p>
               </OverlayContent>
             </Overlay>
           </HotelImage>
-          <HotelText>
-            <h2 className={HeadingFont.className}>WELCOME</h2>
-            <p
-              className={TextFont.className}
-              style={{ width: "80%", lineHeight: "1.2" }}>
-              We are excited to welcome you, our loved ones, to attend our
-              special day and where our hearts first met, Cape Town, South
-              Africa.
-            </p>{" "}
-            <p
-              className={TextFont.className}
-              style={{ width: "80%", lineHeight: "1.2" }}>
-              From across the globe or down the road, we hope you can make the
-              journey and help us in celebrating our new adventure as The
-              Washington’s.
-            </p>
-          </HotelText>
+          <HotelTextContainer>
+            <HotelText className={TextFont.className}>
+              <h4 style={{ marginTop: "50px" }}>WEDDING VENUE</h4>
+              <h5>Best Seat in The House</h5>
+              <div style={{ lineHeight: "1.8", fontSize: "13px" }}>
+                To ensure that you can all enjoy the evening with us, we have
+                blocked rooms at the hotel for “the Washington Wedding” on the
+                night off, should you wish for a short walk back to bed after
+                the festivities and that hangover breakfast the next morning.
+                Arrangements and costs are for your own expense and on a
+                first-come-first-serve basis.
+              </div>
+
+              <div
+                style={{
+                  lineHeight: "1.8",
+                  fontSize: "13px",
+                  marginTop: "20px",
+                  marginBottom: "10px",
+                }}>
+                If you wish to book at the venue, please use the below details:
+              </div>
+
+              <Contact>
+                <img src='/person.png' alt='' width={40} height={40} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                  }}>
+                  Pending
+                </span>
+              </Contact>
+              <Contact>
+                <img src='/phone.png' alt='' width={40} height={40} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                  }}>
+                  Pending
+                </span>
+              </Contact>
+              <Contact>
+                <img src='/envelope.png' alt='' width={40} height={40} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                  }}>
+                  Pending
+                </span>
+              </Contact>
+              <Contact>
+                <img src='/Hashtag.png' alt='' width={40} height={40} />
+                <span
+                  style={{
+                    fontSize: "13px",
+                  }}>
+                  Guest of the Washington Wedding ‘24
+                </span>
+              </Contact>
+
+              <div
+                style={{
+                  fontSize: "13px",
+                  marginTop: "10px",
+                }}>
+                Should the Hotel be fully booked and or looking for other
+                options please see below.
+              </div>
+            </HotelText>
+          </HotelTextContainer>
         </HotelContent>
       </Container>
     </AnimatePresence>
@@ -76,13 +134,35 @@ export default page;
 
 const Container = styled.div`
   background-color: #e8e5e1;
+  position: relative;
   width: 100vw;
+  height: 77vh;
   display: flex;
   justify-content: center;
+  background-image: url("/hotelbg.jpeg");
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 500px) {
+    background-image: none;
+  }
 `;
 
+const BlackOverlay = styled.div`
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
 const Overlay = styled.div`
   background: rgba(255, 255, 255, 0.8);
+
   width: 50%;
   height: 100%;
   position: absolute;
@@ -90,6 +170,13 @@ const Overlay = styled.div`
   top: 0;
   display: flex;
   justify-content: center;
+  z-index: 2;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
 `;
 
 const OverlayContent = styled.div`
@@ -99,38 +186,52 @@ const OverlayContent = styled.div`
 `;
 
 const HotelContent = styled.div`
-  width: 85%;
+  z-index: 1;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @media (max-width: 500px) {
     width: 100%;
+    height: fit-content;
     flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
 const HotelImage = styled.div`
   width: 45%;
-  background-image: url("/herocolor.jpg");
-  height: 85vh;
+
+  height: 100%;
   background-size: cover;
   position: relative;
 
   @media (max-width: 500px) {
-    height: 50vh;
+    height: 30vh;
+    width: 100%;
+  }
+`;
+
+const HotelTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+  background-color: #f3f2f0;
+
+  @media (max-width: 500px) {
     width: 100%;
   }
 `;
 
 const HotelText = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 55%;
+  width: 80%;
   height: 100%;
+`;
 
-  @media (max-width: 500px) {
-    width: 100%;
-  }
+const Contact = styled.div`
+  display: flex;
+
+  align-items: center;
 `;

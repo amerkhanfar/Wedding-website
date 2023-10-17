@@ -42,7 +42,7 @@ const page = () => {
           gap: "20vh",
           backgroundColor: "#e8e5e1",
           width: "100vw",
-          height: "100vh",
+          height: "120vh",
         }}>
         <Rose />
         <Inverted />

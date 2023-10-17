@@ -72,13 +72,17 @@ export default page;
 const Container = styled.div`
   position: relative;
   display: flex;
-  height: 76.5vh;
+  height: 77vh;
   background-color: #e8e5e1;
   width: 100vw;
   justify-content: space-between;
 
   @media (max-width: 500px) {
     flex-direction: column;
+  }
+
+  @media (min-width: 1400px) {
+    height: 90vh;
   }
 `;
 

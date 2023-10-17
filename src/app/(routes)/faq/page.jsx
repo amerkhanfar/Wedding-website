@@ -168,6 +168,10 @@ const Container = styled.div`
   @media (max-width: 500px) {
     flex-direction: column;
   }
+
+  @media (min-width: 1400px) {
+    height: 85vh;
+  }
 `;
 
 const BackgroundImage = styled.div`
@@ -179,7 +183,6 @@ const BackgroundImage = styled.div`
 
   @media (max-width: 500px) {
     width: 100vw;
-    margin-top: 30px;
   }
 `;
 
@@ -191,6 +194,7 @@ const TextContainer = styled.div`
   align-items: center;
   background-color: #e8e5e1;
   overflow-y: scroll;
+  padding-bottom: 40px;
 
   @media (max-width: 500px) {
     width: 100%;
@@ -223,10 +227,19 @@ const Answer = styled.span`
   font-size: 12px;
   margin: 12px 0px;
   width: 80%;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 0px 5px;
+  }
 `;
 
 const Line = styled.hr`
   width: 60%;
   margin: 5px 0px;
   background-color: black;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
