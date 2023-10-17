@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 import Link from "next/link";
@@ -10,10 +10,17 @@ import {
   EpikaMedium,
   EpikaBold,
 } from "../fonts/font";
-
 import { AiFillRightCircle } from "react-icons/ai";
-
+const images = ["./hero.jpg", "./hero2.jpg", "./hero3.jpg"];
 export const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  }, []); // Add interval as a dependency to useEffect
   return (
     <AnimatePresence mode='wait'>
       <motion.div
@@ -30,6 +37,9 @@ export const Hero = () => {
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
 
       <Container>
+        <BackGroundImage
+          style={{ backgroundImage: `url(${images[currentImage]})` }}
+        />
         <LogoContainer>
           <img
             src='/logoWhite.png'
@@ -94,20 +104,28 @@ export const Hero = () => {
 export default Hero;
 
 const breatheAnimation = keyframes`
-  0%   { background-size: 100% auto; }
-  50% { background-size: 140% auto; }
-  100% { background-size: 100% auto; }`;
+  0%   { transform: scale(1); }
+  50% { transform: scale(1.5);  }
+  100% { transform: scale(1);  }`;
 
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-image: url("./hero.jpg");
+  position: relative;
+  overflow: hidden;
+`;
+const BackGroundImage = styled.div`
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   animation-name: ${breatheAnimation};
-  animation-duration: 30s;
+  transition: background-image 1s ease-in-out;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const Overlay = styled.div`
