@@ -100,8 +100,8 @@ const WhiteSpace = styled.div`
   background: white;
   transform: rotate(45deg) translateX(-50%);
   position: absolute;
-  left: 25%;
-  bottom: -106px;
-  width: 100%;
-  height: 103px;
+  left: 34%;
+  bottom: -97px;
+  width: 85px;
+  height: 85px;
 `;
