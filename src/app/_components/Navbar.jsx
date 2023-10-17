@@ -14,10 +14,12 @@ import {
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <Ribbon className={`${TextFont.className}`}>
-        RSVP
-        <WhiteSpace />
-      </Ribbon>
+      <Link className={`${TextFont.className}  link`} href={"/rsvp"}>
+        <Ribbon className={`${TextFont.className}`}>
+          RSVP
+          <WhiteSpace />
+        </Ribbon>
+      </Link>
       <LogoContainer>
         <img src='/LogoBlack.png' width={210} height={150} />
       </LogoContainer>
