@@ -37,6 +37,7 @@ const page = () => {
         <HotelContent>
           <HotelImage>
             <Overlay>
+              <Black />
               <OverlayContent>
                 <span
                   className={HeadingFont.className}
@@ -147,6 +148,22 @@ const Container = styled.div`
   }
 `;
 
+const Black = styled.div`
+  display: none;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: 500px) {
+    display: block;
+    opacity: 0.4;
+  }
+`;
+
 const BlackOverlay = styled.div`
   background-color: black;
   opacity: 0.2;
@@ -157,7 +174,7 @@ const BlackOverlay = styled.div`
   left: 0;
   top: 0;
   @media (max-width: 500px) {
-    display: none;
+    opacity: 0.7;
   }
 `;
 const Overlay = styled.div`
@@ -174,9 +191,11 @@ const Overlay = styled.div`
 
   @media (max-width: 500px) {
     width: 100%;
-    height: 50%;
+    height: 100%;
     text-align: center;
-    background: none;
+    background: url("/hotelbg.jpeg");
+    background-size: cover;
+    color: white;
   }
 `;
 
@@ -184,6 +203,7 @@ const OverlayContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+  z-index: 2;
 `;
 
 const HotelContent = styled.div`
@@ -235,4 +255,8 @@ const Contact = styled.div`
   display: flex;
 
   align-items: center;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
 `;
