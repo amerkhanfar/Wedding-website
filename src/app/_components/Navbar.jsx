@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link className={`${TextFont.className}  link`} href={"/"}>
           TRAVEL
         </Link>
-        <Link className={`${TextFont.className}  link`} href={"/"}>
+        <Link className={`${TextFont.className}  link`} href={"/gifts"}>
           GIFTS
         </Link>
         <Link className={`${TextFont.className}  link`} href={"/"}>

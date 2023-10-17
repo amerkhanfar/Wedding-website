@@ -130,7 +130,7 @@ const Rose = styled.div`
   background-size: cover;
   background-image: url("/rose.png");
   width: 250px;
-  height: 500px;
+  height: 300px;
 
   @media (max-width: 500px) {
     display: none;
@@ -144,7 +144,7 @@ const Inverted = styled.div`
   background-size: cover;
   background-image: url("/inverted.png");
   width: 250px;
-  height: 500px;
+  height: 300px;
   @media (max-width: 500px) {
     display: none;
   }
