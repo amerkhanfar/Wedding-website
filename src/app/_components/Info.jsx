@@ -112,7 +112,7 @@ const Info = () => {
             <div className={TextFont.className} style={{ fontSize: "13px" }}>
               DRESS CODE & COLOR THEME
             </div>
-            <hr style={{ width: "100px" }} />
+            <Line />
             <ColorContainer>
               <ColorCircle style={{ background: "#C8B09D" }} />
               <ColorCircle style={{ background: "#AFBBBE" }} />
@@ -124,14 +124,12 @@ const Info = () => {
               <ColorCircle style={{ background: "#585E57" }} />
               <ColorCircle style={{ background: "#353F4F" }} />
             </ColorContainer>
-            <hr style={{ width: "100px" }} />
-            <span
-              className={TextFont.className}
-              style={{ fontSize: "13px", width: "20%" }}>
+            <Line />
+            <DresscodeRules className={TextFont.className}>
               Semi-formal - think flowy dresses, botton down shirts, and
               timeless silhouettes!{" "}
               <strong>No black, No white, No jeans.</strong>
-            </span>
+            </DresscodeRules>
           </DressCodeContent>
         </DressCode>
 
@@ -192,12 +190,12 @@ const Information = styled.div`
   background-color: white;
   justify-content: center;
   align-items: center;
-
   margin-bottom: 20px;
 
   @media (max-width: 500px) {
-    flex-direction: column;
     height: fit-content;
+    flex-direction: column;
+    margin-bottom: 0;
   }
 `;
 
@@ -213,15 +211,16 @@ const Date = styled.div`
   text-align: center;
 
   @media (max-width: 500px) {
-    height: fit-content;
+    height: 300px;
     width: 100%;
     border: none;
-    gap: 0px;
+    border-bottom: 2px solid #8a5636;
+    gap: 50px;
+    margin-top: 20px;
   }
 `;
 
 const Location = styled.div`
-  min-height: 80%;
   width: 33%;
   gap: 20px;
   display: flex;
@@ -231,15 +230,14 @@ const Location = styled.div`
   text-align: center;
 
   @media (max-width: 500px) {
-    height: fit-content;
+    height: 300px;
     width: 100%;
-    border: none;
+    border-bottom: 2px solid #8a5636;
     gap: 0px;
   }
 `;
 
 const Map = styled.div`
-  min-height: 80%;
   width: 33%;
   gap: 30px;
   display: flex;
@@ -248,9 +246,10 @@ const Map = styled.div`
   text-align: center;
 
   @media (max-width: 500px) {
-    height: fit-content;
+    height: 300px;
     width: 100%;
     border: none;
+
     gap: 0px;
   }
 `;
@@ -266,7 +265,7 @@ const MapOutline = styled.div`
 
 const DressCode = styled.div`
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: flex;
   background-color: white;
   justify-content: center;
@@ -275,22 +274,53 @@ const DressCode = styled.div`
 
   @media (max-width: 500px) {
     flex-direction: column;
+    height: fit-content;
+    margin-top: 50px;
   }
 `;
 
 const DressCodeContent = styled.div`
+  padding: 25px 0px;
   min-width: 80%;
   max-width: 80%;
   display: flex;
   background-color: white;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+`;
+
+const DresscodeRules = styled.span`
+  font-size: 13px;
+  width: 20%;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    text-align: center;
+  }
+`;
+
+const Line = styled.hr`
+  width: 100px;
+
+  @media (max-width: 500px) {
+    width: 55px;
+    transform: rotate(90deg);
+    margin: 40px 0px;
+  }
 `;
 
 const ColorContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 4px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const ColorCircle = styled.div`

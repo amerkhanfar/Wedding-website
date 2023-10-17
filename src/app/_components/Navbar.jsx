@@ -73,4 +73,8 @@ const LinksContainer = styled.div`
   width: 60%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 500px) {
+    width: 85%;
+  }
 `;

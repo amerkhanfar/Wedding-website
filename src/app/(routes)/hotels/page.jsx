@@ -105,7 +105,7 @@ const page = () => {
                 </span>
               </Contact>
               <Contact>
-                <img src='/Hashtag.png' alt='' width={40} height={40} />
+                <img src='/hashtag.png' alt='' width={40} height={40} />
                 <span
                   style={{
                     fontSize: "13px",
