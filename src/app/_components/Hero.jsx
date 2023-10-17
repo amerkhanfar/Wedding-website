@@ -62,8 +62,9 @@ export const Hero = () => {
             MARCH 16, 2024
           </span>
         </HeroTextContainer>
-        <IconContainer>
           <Link href={"/about"}>
+        <IconContainer>
+        
             <svg
               width='100%'
               height='20px'
@@ -96,8 +97,9 @@ export const Hero = () => {
                   fill='none'></line>
               </g>
             </svg>
-          </Link>
+          
         </IconContainer>
+        </Link>
       </Container>
     </AnimatePresence>
   );
