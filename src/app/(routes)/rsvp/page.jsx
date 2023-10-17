@@ -56,9 +56,7 @@ const page = () => {
               Your email is only shared with the event host.
             </span>
           </Header>
-          <form
-            action=''
-            style={{ width: "70%", position: "relative", height: "45%" }}>
+          <form action='' style={{ width: "70%", position: "relative" }}>
             <Input
               type='text'
               placeholder='Name'
@@ -128,12 +126,12 @@ export default page;
 
 const FormContainer = styled.div`
   width: 33vw;
-
+  height: fit-content;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 50px 0px;
   margin-top: 50px;
   gap: 30px;
   @media (max-width: 500px) {
@@ -146,10 +144,12 @@ const FormContainer = styled.div`
 const Rose = styled.div`
   position: absolute;
   right: 0;
-  bottom: 0;
-  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("/rose.png");
-  width: 250px;
+  width: 150px;
   height: 300px;
 
   @media (max-width: 500px) {
@@ -160,8 +160,10 @@ const Rose = styled.div`
 const Inverted = styled.div`
   position: absolute;
   left: 0;
-  bottom: 0;
-  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("/inverted.png");
   width: 250px;
   height: 300px;

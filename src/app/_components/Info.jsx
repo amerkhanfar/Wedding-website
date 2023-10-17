@@ -310,7 +310,7 @@ const Countdown = styled.div`
 `;
 
 const CountdownContainer = styled.div`
-  width: 90%;
+  width: 100%;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;

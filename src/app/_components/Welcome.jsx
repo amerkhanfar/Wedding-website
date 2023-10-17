@@ -76,7 +76,7 @@ const WelcomeText = styled.div`
   flex-direction: column;
   align-items: center;
   width: 40%;
-  height: 46%;
+  height: 300px;
 
   @media (max-width: 500px) {
     width: 100%;
@@ -90,7 +90,7 @@ const Rose = styled.div`
   background-size: cover;
   background-image: url("/rose.png");
   width: 200px;
-  height: 500px;
+  height: 250px;
 
   @media (max-width: 500px) {
     display: none;
