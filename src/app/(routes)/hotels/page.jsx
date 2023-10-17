@@ -2,6 +2,7 @@
 import React from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { BiSolidMap, BiLinkExternal } from "react-icons/bi";
 
 import Navbar from "@/app/_components/Navbar";
 import styled from "styled-components";
@@ -118,11 +119,24 @@ const page = () => {
               <div
                 style={{
                   fontSize: "13px",
-                  marginTop: "10px",
+                  marginTop: "18px",
                 }}>
                 Should the Hotel be fully booked and or looking for other
                 options please see below.
               </div>
+
+              <LinksContainer>
+                <h2>MAP TO VENUE</h2>
+                <BiLinkExternal />
+              </LinksContainer>
+              <LinksContainer>
+                <a
+                  href='/http://www.asara.co.za/'
+                  style={{ textDecoration: "none", color: "black" }}>
+                  http://www.asara.co.za/
+                </a>
+                <BiLinkExternal />
+              </LinksContainer>
             </HotelText>
           </HotelTextContainer>
         </HotelContent>
@@ -263,4 +277,6 @@ const Contact = styled.div`
 
 const LinksContainer = styled.div`
   display: flex;
+  align-items: center;
+  gap: 20px;
 `;
