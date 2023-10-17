@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link className={`${TextFont.className}  link`} href={"/gifts"}>
           GIFTS
         </Link>
-        <Link className={`${TextFont.className}  link`} href={"/"}>
+        <Link className={`${TextFont.className}  link`} href={"/faq"}>
           FAQ's
         </Link>
       </LinksContainer>

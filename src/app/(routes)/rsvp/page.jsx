@@ -20,21 +20,19 @@ import { BiSolidEnvelope } from "react-icons/bi";
 const page = () => {
   const [hotDate, setHotDate] = useState("no");
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode='wait'>
       <motion.div
-        className="slide-in"
+        className='slide-in'
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 1 }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-      ></motion.div>
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
       <motion.div
-        className="slide-out"
+        className='slide-out'
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 0 }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-      ></motion.div>
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
 
       <Navbar />
       <div
@@ -44,14 +42,13 @@ const page = () => {
           gap: "20vh",
           backgroundColor: "#e8e5e1",
           width: "100vw",
-          height: "80vh",
-        }}
-      >
+          height: "100vh",
+        }}>
         <Rose />
         <Inverted />
         <FormContainer>
           <Header>
-            <BiSolidEnvelope size="30px" color="#245879" />
+            <BiSolidEnvelope size='30px' color='#245879' />
             <h3 className={TextFont.className}>
               PLEASE ENTER YOUR EMAIL TO RSVP
             </h3>
@@ -60,51 +57,52 @@ const page = () => {
             </span>
           </Header>
           <form
-            action=""
-            style={{ width: "70%", position: "relative", height: "45%" }}
-          >
+            action=''
+            style={{ width: "70%", position: "relative", height: "45%" }}>
             <Input
-              type="text"
-              placeholder="Name"
+              type='text'
+              placeholder='Name'
               className={TextFont.className}
             />
             <Input
-              type="Email"
-              placeholder="Email Address"
+              type='Email'
+              placeholder='Email Address'
               className={TextFont.className}
             />
-            <div className={TextFont.className} style={{ margin: "15px 0px" }}>Bringing a hot date?</div>
+            <div className={TextFont.className} style={{ margin: "15px 0px" }}>
+              Bringing a hot date?
+            </div>
             <div>
               <input
-                type="radio"
-                name="subscribe"
-                value="yes"
-                id="yes"
+                type='radio'
+                name='subscribe'
+                value='yes'
+                id='yes'
                 onChange={() => setHotDate("yes")}
               />
-              <label className={TextFont.className} for="subscribeNews">
+              <label className={TextFont.className} for='subscribeNews'>
                 Yes
               </label>
               <input
-                type="radio"
-                name="subscribe"
-                value="no"
-                id='no'               
+                type='radio'
+                name='subscribe'
+                value='no'
+                id='no'
                 onChange={() => setHotDate("no")}
               />
-              <label className={TextFont.className} for="subscribeNews">
+              <label className={TextFont.className} for='subscribeNews'>
                 No
               </label>
               {hotDate === "yes" ? (
                 <>
                   <Input
-                    type="text"
-                    placeholder="Name of your hot date"
+                    type='text'
+                    placeholder='Name of your hot date'
                     className={TextFont.className}
                   />
                   <Input
-                    type="Email"
-                    placeholder="Email Address of your hot date"
+                    type='Email'
+                    placeholder='Email Address of your hot date'
                     className={TextFont.className}
                   />
                 </>
@@ -114,7 +112,7 @@ const page = () => {
             </div>
             <SubmitContainer>
               <Submit
-                type="submit"
+                type='submit'
                 value={"SEND"}
                 className={TextFont.className}
               />
@@ -130,7 +128,7 @@ export default page;
 
 const FormContainer = styled.div`
   width: 33vw;
-  /* height: 60vh; */
+
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -185,6 +183,7 @@ const Input = styled.input`
   border: none;
   border-bottom: 1px solid black;
   outline: none;
+  margin: 10px 0px;
   padding: 0;
 `;
 
