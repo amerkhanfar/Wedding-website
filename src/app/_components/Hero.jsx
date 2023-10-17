@@ -1,5 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
+import styled, { keyframes } from "styled-components";
+import Link from "next/link";
 import {
   HeadingFont,
   TextFont,
@@ -13,66 +15,99 @@ import { AiFillRightCircle } from "react-icons/ai";
 
 export const Hero = () => {
   return (
-    <Container>
-      <LogoContainer>
-        <img src='/logo.png' width={100} height={100} style={{ zIndex: 2 }} />
-      </LogoContainer>
-      <Overlay></Overlay>
-      <HeroTextContainer>
-        <span className={TextFont.className} style={{ fontSize: "20px" }}>
-          WE’RE GETTING MARRIED
-        </span>
-        <span className={Epika.className} style={{ fontSize: "50px" }}>
-          DENZIL & MARLIANA
-        </span>
-        <span className={TextFont.className}>MARCH 16, 2024</span>
-      </HeroTextContainer>
-      <IconContainer>
-        <svg
-          width='100%'
-          height='20px'
-          viewBox='0 0 56 87'
-          version='1.1'
-          xmlns='http://www.w3.org/2000/svg'>
-          <g>
-            <line
-              transform='rotate(101.38104248046875 27.750000000000004,63.24999999999999) '
-              stroke='#fff'
-              stroke-linecap='undefined'
-              stroke-linejoin='undefined'
-              id='svg_4'
-              y2='83.75'
-              x2='53.75'
-              y1='42.75'
-              x1='1.75'
-              stroke-width='5'
-              fill='none'></line>
-            <line
-              stroke-linecap='undefined'
-              stroke-linejoin='undefined'
-              id='svg_5'
-              y2='41.75'
-              x2='52.75'
-              y1='0.75'
-              x1='0.75'
-              stroke-width='5'
-              stroke='#fff'
-              fill='none'></line>
-          </g>
-        </svg>
-      </IconContainer>
-    </Container>
+    <AnimatePresence mode='wait'>
+      <motion.div
+        className='slide-in'
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 0 }}
+        exit={{ scaleX: 1 }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
+      <motion.div
+        className='slide-out'
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        exit={{ scaleX: 0 }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
+
+      <Container>
+        <LogoContainer>
+          <img
+            src='/logoWhite.png'
+            width={300}
+            height={200}
+            style={{ zIndex: 2 }}
+          />
+        </LogoContainer>
+        <Overlay></Overlay>
+        <HeroTextContainer>
+          <span className={TextFont.className} style={{ fontSize: "30px" }}>
+            WE’RE GETTING MARRIED
+          </span>
+          <span className={Epika.className} style={{ fontSize: "50px" }}>
+            DENZIL & MARLIANA
+          </span>
+          <span className={TextFont.className} style={{ fontSize: "20px" }}>
+            MARCH 16, 2024
+          </span>
+        </HeroTextContainer>
+        <IconContainer>
+          <Link href={"/about"}>
+            <svg
+              width='100%'
+              height='20px'
+              viewBox='0 0 56 87'
+              version='1.1'
+              xmlns='http://www.w3.org/2000/svg'>
+              <g>
+                <line
+                  transform='rotate(101.38104248046875 27.750000000000004,63.24999999999999) '
+                  stroke='#fff'
+                  stroke-linecap='undefined'
+                  stroke-linejoin='undefined'
+                  id='svg_4'
+                  y2='83.75'
+                  x2='53.75'
+                  y1='42.75'
+                  x1='1.75'
+                  stroke-width='5'
+                  fill='none'></line>
+                <line
+                  stroke-linecap='undefined'
+                  stroke-linejoin='undefined'
+                  id='svg_5'
+                  y2='41.75'
+                  x2='52.75'
+                  y1='0.75'
+                  x1='0.75'
+                  stroke-width='5'
+                  stroke='#fff'
+                  fill='none'></line>
+              </g>
+            </svg>
+          </Link>
+        </IconContainer>
+      </Container>
+    </AnimatePresence>
   );
 };
 
 export default Hero;
 
+const breatheAnimation = keyframes`
+  0%   { background-size: 100% auto; }
+  50% { background-size: 140% auto; }
+  100% { background-size: 100% auto; }`;
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-image: url("./bw.jpg");
+  background-image: url("./hero.jpg");
   background-position: center;
+  background-size: cover;
+  animation-name: ${breatheAnimation};
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
 `;
 
 const Overlay = styled.div`
