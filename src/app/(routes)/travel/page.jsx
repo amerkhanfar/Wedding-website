@@ -131,7 +131,7 @@ const page = () => {
               </LinksContainer>
               <LinksContainer>
                 <a
-                  href='http://www.asara.co.za/'
+                  href='/http://www.asara.co.za/'
                   style={{ textDecoration: "none", color: "black" }}>
                   http://www.asara.co.za/
                 </a>
@@ -141,41 +141,6 @@ const page = () => {
           </HotelTextContainer>
         </HotelContent>
       </Container>
-
-      <SuggestionsContainer className={TextFont.className}>
-        <Suggestions>
-          <Suggestion>
-            <span>CAPE TOWN HOTELS</span>
-            <h3>Your City Landing</h3>
-            <div>
-              Our recommendations for the before-and-after legs of your South
-              African trip. Please note that these properties are enjoyed as an
-              experience as they are unique and tie into the local history of
-              the city. It is by no means essential to stay in a hotel or
-              somewhere fancy, but the list below falls within this category.
-            </div>
-            <a style={{ marginTop: "20px", color: "black" }} href='/'>
-              Booking.com
-            </a>
-          </Suggestion>
-          <Seperation />
-          <Suggestion>
-            <span>AIRBNB</span>
-            <h3>The Best Way to Stay</h3>
-            <div>
-              While everyone loves the luxury of a hotel, the best way to stay
-              in Cape Town is through services like Airbnb. The city is full of
-              short-term accommodation options located in incredible pockets of
-              the city bowl, Atlantic seaboard, and nearby suburbs. We highly
-              recommend this option if you'd like to get the best bang for your
-              buck, while still enjoying premier lodgings.
-            </div>
-            <a style={{ marginTop: "20px", color: "black" }} href='/'>
-              Airbnbs in Cape town
-            </a>
-          </Suggestion>
-        </Suggestions>
-      </SuggestionsContainer>
     </AnimatePresence>
   );
 };
@@ -194,7 +159,6 @@ const Container = styled.div`
   background-position: center;
   @media (max-width: 500px) {
     background-image: none;
-    height: fit-content;
   }
 
   @media (min-width: 1500px) {
@@ -297,7 +261,6 @@ const HotelTextContainer = styled.div`
 
   @media (max-width: 500px) {
     width: 100%;
-    padding-bottom: 30px;
   }
 `;
 
@@ -319,47 +282,15 @@ const LinksContainer = styled.div`
 `;
 
 const SuggestionsContainer = styled.div`
-  position: relative;
   width: 100vw;
-  height: 50vh;
   display: flex;
   justify-content: center;
   background-color: #abb7ba;
-
-  @media (max-width: 500px) {
-    height: fit-content;
-  }
 `;
 
 const Suggestions = styled.div`
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: 500px) {
-    flex-direction: column;
-    width: 90%;
-  }
-`;
-
-const Suggestion = styled.div`
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 500px) {
-    width: 100%;
-    margin: 40px 0px;
-  }
-`;
-
-const Seperation = styled.hr`
-  width: 10px;
-  transform: rotate(90deg);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background-color: black;
-  transform: rotate(90deg) translate(-50%, -50%);
 `;

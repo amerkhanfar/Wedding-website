@@ -14,6 +14,10 @@ import {
 const Navbar = () => {
   return (
     <NavbarContainer>
+      <Ribbon className={`${TextFont.className}`}>
+        RSVP
+        <WhiteSpace />
+      </Ribbon>
       <LogoContainer>
         <img src='/LogoBlack.png' width={210} height={150} />
       </LogoContainer>
@@ -77,4 +81,27 @@ const LinksContainer = styled.div`
   @media (max-width: 500px) {
     width: 85%;
   }
+`;
+
+const Ribbon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 93px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  background-color: #585e57;
+  color: white;
+`;
+
+const WhiteSpace = styled.div`
+  background: white;
+  transform: rotate(45deg) translateX(-50%);
+  position: absolute;
+  left: 25%;
+  bottom: -106px;
+  width: 100%;
+  height: 103px;
 `;

@@ -11,7 +11,7 @@ import {
   EpikaBold,
 } from "../fonts/font";
 import { AiFillRightCircle } from "react-icons/ai";
-const images = ["./hero.jpg", "./hero2.jpg", "./hero3.jpg"];
+const images = ["./hero.jpg", "./hero2.jpg"];
 export const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
   useEffect(() => {

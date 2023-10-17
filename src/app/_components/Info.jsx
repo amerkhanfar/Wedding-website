@@ -362,7 +362,7 @@ const CountdownTimer = styled.div`
   height: 300px;
   border-radius: 50%;
   background-color: white;
-  font-size: 25px;
+  font-size: 30px;
 
   @media (max-width: 500px) {
     margin: 10px 0px;
