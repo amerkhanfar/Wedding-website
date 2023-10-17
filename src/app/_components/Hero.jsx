@@ -42,7 +42,7 @@ export const Hero = () => {
         />
         <LogoContainer>
           <img
-            src='/logoWhite.png'
+            src='/LogoWhite.png'
             width={300}
             height={200}
             style={{ zIndex: 2 }}
