@@ -96,6 +96,7 @@ const Ribbon = styled.div`
   top: 0;
   background-color: #585e57;
   color: white;
+  overflow: hidden;
 `;
 
 const WhiteSpace = styled.div`
