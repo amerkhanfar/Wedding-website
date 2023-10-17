@@ -170,7 +170,7 @@ const Container = styled.div`
   }
 
   @media (min-width: 1400px) {
-    height: 85vh;
+    height: 87vh;
   }
 `;
 
