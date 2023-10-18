@@ -112,7 +112,7 @@ export default page;
 const Container = styled.div`
   position: relative;
   display: flex;
-  height: 77vh;
+  height: 85vh;
   background-color: #e8e5e1;
   width: 100vw;
   justify-content: space-between;
@@ -121,7 +121,7 @@ const Container = styled.div`
     flex-direction: column;
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1600px) {
     height: 90vh;
   }
 `;
