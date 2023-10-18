@@ -143,7 +143,7 @@ const page = () => {
 
       <PhoneContainer className={TextFont.className}>
         <Arrow>
-          <Link href={"/hotels"}>
+          <Link href={"/gifts"}>
             <IconssContainer>
               <svg
                 width='100%'
@@ -601,6 +601,6 @@ const IconssContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    bottom: 100px;
+    bottom: 70px;
   }
 `;

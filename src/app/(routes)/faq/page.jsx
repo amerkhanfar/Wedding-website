@@ -317,6 +317,6 @@ const IconContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    bottom: 100px;
+    bottom: 70px;
   }
 `;

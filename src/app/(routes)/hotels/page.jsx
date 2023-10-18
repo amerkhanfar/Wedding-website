@@ -35,7 +35,7 @@ const page = () => {
       <Navbar />
       <Container>
         <Arrow>
-          <Link href={"/hotels"}>
+          <Link href={"/travel"}>
             <IconContainer>
               <svg
                 width='100%'
@@ -435,6 +435,6 @@ const IconContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    bottom: 100px;
+    bottom: 70px;
   }
 `;

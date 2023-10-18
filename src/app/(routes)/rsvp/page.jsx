@@ -273,7 +273,7 @@ const IconContainer = styled.div`
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  bottom: 35px;
+  bottom: 70px;
   transform: translateX(-50%);
   background-color: #8a5636;
   display: flex;
@@ -284,9 +284,5 @@ const IconContainer = styled.div`
   transition: all 0.3s;
   &:hover {
     border: 1px solid white;
-  }
-
-  @media (max-width: 500px) {
-    bottom: 100px;
   }
 `;
