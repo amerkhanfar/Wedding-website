@@ -136,13 +136,103 @@ const page = () => {
         </RightMiddle>
       </Container>
 
-      <PhoneContainer>
+      <PhoneContainer className={TextFont.className}>
         <PhoneHeader>
-          <span className={HeadingFont.className} style={{ fontSize: "40px" }}>
+          <PhoneOverlay />
+          <span
+            className={HeadingFont.className}
+            style={{
+              fontSize: "40px",
+              color: "white",
+              zIndex: "2",
+              marginTop: "20px",
+            }}>
             Travel & Tourism
           </span>
-          <PhoneIconContainer></PhoneIconContainer>
+          <PhoneIconContainer style={{ color: "white", zIndex: "2" }}>
+            <PhoneCategories>
+              <PhoneCategory>
+                <PhoneIcon />
+                <PhoneCategoryText>FLIGHTS</PhoneCategoryText>
+              </PhoneCategory>
+              <PhoneCategory>
+                <PhoneIcon style={{ backgroundImage: 'url("/taxi.png")' }} />
+                <PhoneCategoryText>TRANSPORTATION</PhoneCategoryText>
+              </PhoneCategory>
+              <PhoneCategory>
+                <PhoneIcon style={{ backgroundImage: 'url("/scope.png")' }} />
+                <PhoneCategoryText>THINGS TO DO</PhoneCategoryText>
+              </PhoneCategory>
+            </PhoneCategories>
+          </PhoneIconContainer>
         </PhoneHeader>
+        <PhoneInfoContainer>
+          <PhoneInfos style={{ marginTop: "30px" }}>
+            <PhoneInfo>
+              <PhoneInfoText>
+                <PhoneInfoFirst>
+                  {" "}
+                  <FaPlane
+                    size={"20px"}
+                    color='#79807E'
+                    style={{ margin: "0px 20px 0px 0px", minWidth: "0PX" }}
+                  />
+                  <span>FLIGHTS </span>
+                </PhoneInfoFirst>
+                <InfoSecond>Getting In</InfoSecond>
+                <InfoThird>
+                  We recommend flying into Cape Town International Airport!
+                </InfoThird>
+                <InfoLink href='/'>Cape Town International Airport</InfoLink>
+              </PhoneInfoText>
+            </PhoneInfo>
+            <PhoneInfo>
+              <PhoneInfoText>
+                <PhoneInfoFirst>
+                  {" "}
+                  <FaTaxi
+                    size={"20px"}
+                    color='#79807E'
+                    style={{ margin: "0px 20px 0px 0px", minWidth: "20PX" }}
+                  />
+                  <span>TRANSPORTATION </span>
+                </PhoneInfoFirst>
+                <InfoSecond>Getting Downtown</InfoSecond>
+                <InfoThird>
+                  The easiest options are Uber and Bolt, which are inexpensive
+                  and run 24 /7. Alternatively, there are several car rental
+                  options available at the airport. Be sure to ask for an
+                  automatic if needed - the South African standard is manual.
+                </InfoThird>
+                <InfoLink href='/'>Avis Rent a Car</InfoLink>
+              </PhoneInfoText>
+            </PhoneInfo>
+            <PhoneInfo>
+              <PhoneInfoText>
+                <PhoneInfoFirst>
+                  <BiSolidBinoculars
+                    size={"20px"}
+                    color='#79807E'
+                    style={{ margin: "0px 20px 0px 0px", minWidth: "0PX" }}
+                  />
+                  <span>THINGS TO DO </span>
+                </PhoneInfoFirst>
+                <InfoSecond>Cape Town Bucket List</InfoSecond>
+                <InfoThird>
+                  You could spend a weekend, a month, a year in Cape Town - and
+                  never run out of things to do and see! Our personal favorites
+                  include a climb up Lion's head, a drive around Chapmans Peak,
+                  visiting the penguins at Boulders Beach, wine-tasting...
+                  everywhere, and catching a tan on Clifton Beach.
+                </InfoThird>
+                <InfoThird>Here's another fabulous list of to-do's:</InfoThird>
+                <InfoLink href='https://insideguide.co.za/cape-town/to-do/'>
+                  https://insideguide.co.za/cape-town/to-do/
+                </InfoLink>
+              </PhoneInfoText>
+            </PhoneInfo>
+          </PhoneInfos>
+        </PhoneInfoContainer>
       </PhoneContainer>
     </AnimatePresence>
   );
@@ -184,16 +274,87 @@ const PhoneContainer = styled.div`
 `;
 
 const PhoneHeader = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  background: rgba(232, 229, 225, 0.8);
+
+  background: url("/hotelbg.jpeg");
+  background-size: cover;
+  background-position: center;
   align-items: center;
+`;
+
+const PhoneOverlay = styled.div`
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 `;
 
 const PhoneIconContainer = styled.div`
   display: flex;
   width: 80%;
+`;
+
+const PhoneCategories = styled.div`
+  display: flex;
+  margin: 30px 0px;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+const PhoneCategory = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+`;
+
+const PhoneIcon = styled.div`
+  width: 80px;
+  height: 80px;
+  background-image: url("/flight.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PhoneCategoryText = styled.span`
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+`;
+
+const PhoneInfoContainer = styled.div`
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: #e8e5e1;
+`;
+
+const PhoneInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 15px;
+`;
+
+const PhoneInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const PhoneInfoFirst = styled.div`
+  display: flex;
+  gap: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 2px;
 `;
 
 const BlackOverlay = styled.div`
@@ -330,6 +491,13 @@ const InfoText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+`;
+
+const PhoneInfoText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
 `;
 
 const InfoFirst = styled.span`
