@@ -287,7 +287,7 @@ const Container = styled.div`
   background-color: #e8e5e1;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   background: url("/travelbg.jpg");
