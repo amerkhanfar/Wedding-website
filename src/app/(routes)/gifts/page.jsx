@@ -145,6 +145,7 @@ const Text = styled.div`
   @media (max-width: 500px) {
     width: 100%;
     text-align: center;
+    align-items: center;
   }
 `;
 
@@ -197,7 +198,7 @@ const ThankyouText = styled.div`
   font-weight: 500;
 
   @media (max-width: 500px) {
-    width: 100%;
+    width: 80%;
     font-size: 11px;
   }
 `;
@@ -235,6 +236,6 @@ const IconContainer = styled.div`
   }
 
   @media (max-width: 500px) {
-    bottom: 70px;
+    bottom: 50px;
   }
 `;
