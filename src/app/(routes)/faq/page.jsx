@@ -134,7 +134,7 @@ const page = () => {
               </Answer>
               <Line />
             </QuestionContainer>
-            <QuestionContainer>
+            <QuestionContainer style={{ marginBottom: "150px" }}>
               <Question>To drink, or to drive?</Question>
               <Answer>
                 If you're planning to drink at the wedding, which we know most
@@ -164,6 +164,7 @@ const Container = styled.div`
   background-color: #e8e5e1;
   width: 100vw;
   justify-content: space-between;
+  overflow: hidden;
 
   @media (max-width: 500px) {
     flex-direction: column;
@@ -171,6 +172,7 @@ const Container = styled.div`
 
   @media (min-width: 1400px) {
     height: 87vh;
+    overflow: hidden;
   }
 `;
 

@@ -1,4 +1,7 @@
 "use client";
+
+import { BiSolidBinoculars } from "react-icons/bi";
+import { FaTaxi, FaPlane, FaBinoculars } from "react-icons/fa";
 import React from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,113 +37,113 @@ const page = () => {
 
       <Navbar />
       <Container>
-        <BlackOverlay />
-        <HotelContent>
-          <HotelImage>
-            <Overlay>
-              <Black />
-              <OverlayContent>
-                <span
-                  className={HeadingFont.className}
-                  style={{ fontSize: "70px", marginTop: "10px" }}>
-                  Hotels
-                </span>
+        <Left />
 
-                <p className={TextFont.className} style={{ fontSize: "20px" }}>
-                  ASARA WINE ESTATE & HOTEL
-                </p>
+        <LeftMiddle>
+          <BlackOverlay />
+          <LeftMiddleContent>
+            <span
+              className={HeadingFont.className}
+              style={{ fontSize: "55px" }}>
+              Travel & Tourism
+            </span>
 
-                <p className={TextFont.className}>
-                  Polkadraai Rd, Stellenbosch, 7600, Cape Town, South Africa
-                </p>
-              </OverlayContent>
-            </Overlay>
-          </HotelImage>
-          <HotelTextContainer>
-            <HotelText className={TextFont.className}>
-              <h4 style={{ marginTop: "50px" }}>WEDDING VENUE</h4>
-              <h5>Best Seat in The House</h5>
-              <div style={{ lineHeight: "1.8", fontSize: "13px" }}>
-                To ensure that you can all enjoy the evening with us, we have
-                blocked rooms at the hotel for “the Washington Wedding” on the
-                night off, should you wish for a short walk back to bed after
-                the festivities and that hangover breakfast the next morning.
-                Arrangements and costs are for your own expense and on a
-                first-come-first-serve basis.
-              </div>
+            <Categories>
+              <Category>
+                <Icon />
+                <CategoryText className={TextFont.className}>
+                  FLIGHTS
+                </CategoryText>
+              </Category>
+              <Category>
+                <Icon style={{ backgroundImage: 'url("/taxi.png")' }} />
+                <CategoryText className={TextFont.className}>
+                  TRANSPORTATION
+                </CategoryText>
+              </Category>
+              <Category>
+                <Icon style={{ backgroundImage: 'url("/scope.png")' }} />
+                <CategoryText className={TextFont.className}>
+                  THINGS TO DO
+                </CategoryText>
+              </Category>
+            </Categories>
+          </LeftMiddleContent>
+        </LeftMiddle>
 
-              <div
+        <RightMiddle>
+          <RightMiddleContent className={TextFont.className}>
+            <InfoContainer style={{ marginTop: "35px" }}>
+              <FaPlane
+                size={"20px"}
+                color='#79807E'
                 style={{
-                  lineHeight: "1.8",
-                  fontSize: "13px",
-                  marginTop: "20px",
-                  marginBottom: "10px",
-                }}>
-                If you wish to book at the venue, please use the below details:
-              </div>
-
-              <Contact>
-                <img src='/person.png' alt='' width={40} height={40} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                  }}>
-                  Pending
-                </span>
-              </Contact>
-              <Contact>
-                <img src='/phone.png' alt='' width={40} height={40} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                  }}>
-                  Pending
-                </span>
-              </Contact>
-              <Contact>
-                <img src='/envelope.png' alt='' width={40} height={40} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                  }}>
-                  Pending
-                </span>
-              </Contact>
-              <Contact>
-                <img src='/hashtag.png' alt='' width={40} height={40} />
-                <span
-                  style={{
-                    fontSize: "13px",
-                  }}>
-                  Guest of the Washington Wedding ‘24
-                </span>
-              </Contact>
-
-              <div
-                style={{
-                  fontSize: "13px",
-                  marginTop: "18px",
-                }}>
-                Should the Hotel be fully booked and or looking for other
-                options please see below.
-              </div>
-
-              <LinksContainer>
-                <h2>MAP TO VENUE</h2>
-                <BiLinkExternal />
-              </LinksContainer>
-              <LinksContainer>
-                <a
-                  href='/http://www.asara.co.za/'
-                  style={{ textDecoration: "none", color: "black" }}>
-                  http://www.asara.co.za/
-                </a>
-                <BiLinkExternal />
-              </LinksContainer>
-            </HotelText>
-          </HotelTextContainer>
-        </HotelContent>
+                  margin: "0px 20px 0px 0px",
+                  minWidth: "20PX",
+                  transform: "rotate(-45deg)",
+                }}
+              />
+              <InfoText>
+                <InfoFirst>FLIGHTS</InfoFirst>
+                <InfoSecond>Getting In</InfoSecond>
+                <InfoThird>
+                  We recommend flying into Cape Town International Airport!
+                </InfoThird>
+                <InfoLink href='/'>Cape Town International Airport</InfoLink>
+              </InfoText>
+            </InfoContainer>
+            <InfoContainer>
+              <FaTaxi
+                size={"20px"}
+                color='#79807E'
+                style={{ margin: "0px 20px 0px 0px", minWidth: "20PX" }}
+              />
+              <InfoText>
+                <InfoFirst>TRANSPORTATION</InfoFirst>
+                <InfoSecond>Getting Downtown</InfoSecond>
+                <InfoThird>
+                  The easiest options are Uber and Bolt, which are inexpensive
+                  and run 24 /7. Alternatively, there are several car rental
+                  options available at the airport. Be sure to ask for an
+                  automatic if needed - the South African standard is manual.
+                </InfoThird>
+                <InfoLink href='/'>Avis Rent a Car</InfoLink>
+              </InfoText>
+            </InfoContainer>
+            <InfoContainer style={{ border: "none" }}>
+              <BiSolidBinoculars
+                size={"25px"}
+                color='#79807E'
+                style={{ margin: "0px 12px 0px 0px", minWidth: "25PX" }}
+              />
+              <InfoText>
+                <InfoFirst>THINGS TO DO</InfoFirst>
+                <InfoSecond>Cape Town Bucket List</InfoSecond>
+                <InfoThird>
+                  You could spend a weekend, a month, a year in Cape Town - and
+                  never run out of things to do and see! Our personal favorites
+                  include a climb up Lion's head, a drive around Chapmans Peak,
+                  visiting the penguins at Boulders Beach, wine-tasting...
+                  everywhere, and catching a tan on Clifton Beach.
+                </InfoThird>
+                <InfoThird>Here's another fabulous list of to-do's:</InfoThird>
+                <InfoLink href='https://insideguide.co.za/cape-town/to-do/'>
+                  https://insideguide.co.za/cape-town/to-do/
+                </InfoLink>
+              </InfoText>
+            </InfoContainer>
+          </RightMiddleContent>
+        </RightMiddle>
       </Container>
+
+      <PhoneContainer>
+        <PhoneHeader>
+          <span className={HeadingFont.className} style={{ fontSize: "40px" }}>
+            Travel & Tourism
+          </span>
+          <PhoneIconContainer></PhoneIconContainer>
+        </PhoneHeader>
+      </PhoneContainer>
     </AnimatePresence>
   );
 };
@@ -151,22 +154,49 @@ const Container = styled.div`
   background-color: #e8e5e1;
   position: relative;
   width: 100vw;
-  height: 77vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-image: url("/hotelbg.jpeg");
   background-size: cover;
   background-position: center;
-  @media (max-width: 500px) {
-    background-image: none;
+
+  @media (min-width: 1700px) {
+    height: 87vh;
   }
 
-  @media (min-width: 1500px) {
-    height: 87vh;
+  @media (max-width: 1000px) {
+    display: none;
   }
 `;
 
-const Black = styled.div`
+const PhoneContainer = styled.div`
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: fit-content;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+`;
+
+const PhoneHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  background: rgba(232, 229, 225, 0.8);
+  align-items: center;
+`;
+
+const PhoneIconContainer = styled.div`
+  display: flex;
+  width: 80%;
+`;
+
+const BlackOverlay = styled.div`
   display: none;
   background-color: black;
   opacity: 0.2;
@@ -178,33 +208,28 @@ const Black = styled.div`
   top: 0;
   @media (max-width: 500px) {
     display: block;
-    opacity: 0.4;
-  }
-`;
-
-const BlackOverlay = styled.div`
-  background-color: black;
-  opacity: 0.2;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  @media (max-width: 500px) {
     opacity: 0.7;
   }
 `;
-const Overlay = styled.div`
-  background: rgba(255, 255, 255, 0.8);
 
-  width: 50%;
-  height: 100%;
+const Left = styled.div`
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
+  z-index: 3;
+  width: 8%;
+  height: 100%;
+  background-color: #e8e5e1;
+`;
+
+const LeftMiddle = styled.div`
+  position: relative;
+  background: rgba(232, 229, 225, 0.8);
+  width: 20%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 2;
 
   @media (max-width: 500px) {
@@ -217,80 +242,113 @@ const Overlay = styled.div`
   }
 `;
 
-const OverlayContent = styled.div`
+const LeftMiddleContent = styled.div`
+  width: 85%;
+  height: 95%;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  z-index: 2;
 `;
 
-const HotelContent = styled.div`
-  z-index: 1;
-  width: 100%;
+const Categories = styled.div`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  left: -60px;
+  top: 49%;
 
-  @media (max-width: 500px) {
-    width: 100%;
-    height: fit-content;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  transform: translateY(-60%);
 `;
 
-const HotelImage = styled.div`
-  width: 45%;
+const Category = styled.div`
+  display: flex;
+  align-items: center;
+  width: fit-content;
+`;
 
-  height: 100%;
+const Icon = styled.div`
+  width: 120px;
+  height: 120px;
+  background-image: url("/flight.png");
   background-size: cover;
-  position: relative;
-
-  @media (max-width: 500px) {
-    height: 30vh;
-    width: 100%;
-  }
-`;
-
-const HotelTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 40%;
-  height: 100%;
-  background-color: #f3f2f0;
-
-  @media (max-width: 500px) {
-    width: 100%;
-  }
-`;
-
-const HotelText = styled.div`
-  width: 80%;
-  height: 100%;
-`;
-
-const Contact = styled.div`
-  display: flex;
-
-  align-items: center;
-`;
-
-const LinksContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-`;
-
-const SuggestionsContainer = styled.div`
-  width: 100vw;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  background-color: #abb7ba;
+  align-items: center;
 `;
 
-const Suggestions = styled.div`
-  width: 70%;
+const CategoryText = styled.span`
+  font-size: 13px;
+  font-weight: 600;
+`;
+
+const RightMiddle = styled.div`
+  background: #e8e5e1;
+  width: 35%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  z-index: 2;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url("/hotelbg.jpeg");
+    background-size: cover;
+    color: white;
+  }
+`;
+
+const RightMiddleContent = styled.div`
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
+
+const InfoContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+`;
+
+const InfoIcon = styled.div`
+  width: 120px;
+  height: 120px;
+  background-image: url("/flight.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const InfoText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+const InfoFirst = styled.span`
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 2px;
+`;
+
+const InfoSecond = styled.span`
+  font-size: 15px;
+  font-weight: 600;
+`;
+
+const InfoThird = styled.span`
+  font-size: 13px;
+`;
+
+const InfoLink = styled.a`
+  color: black;
+  font-size: 13px;
+  text-decoration: none;
 `;

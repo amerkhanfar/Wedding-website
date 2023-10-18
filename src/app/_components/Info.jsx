@@ -207,14 +207,15 @@ const Date = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 2px solid #8a5636;
+  border-right: 1px solid #8a5636;
   text-align: center;
 
   @media (max-width: 500px) {
     height: 300px;
     width: 100%;
     border: none;
-    border-bottom: 2px solid #8a5636;
+    border-bottom: 1px solid #8a5636;
+    padding-bottom: 10px;
     gap: 50px;
     margin-top: 20px;
   }
@@ -226,13 +227,14 @@ const Location = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 2px solid #8a5636;
+  border-right: 1px solid #8a5636;
   text-align: center;
 
   @media (max-width: 500px) {
     height: 300px;
     width: 100%;
-    border-bottom: 2px solid #8a5636;
+    border-bottom: 1px solid #8a5636;
+    padding-bottom: 10px;
     gap: 0px;
   }
 `;

@@ -232,7 +232,7 @@ const BlackOverlay = styled.div`
   }
 `;
 const Overlay = styled.div`
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(232, 229, 225, 0.8);
 
   width: 50%;
   height: 100%;

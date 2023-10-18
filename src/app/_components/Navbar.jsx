@@ -36,7 +36,7 @@ const Navbar = () => {
         <Link className={`${TextFont.className}  link`} href={"/hotels"}>
           HOTELS
         </Link>
-        <Link className={`${TextFont.className}  link`} href={"/"}>
+        <Link className={`${TextFont.className}  link`} href={"/travel"}>
           TRAVEL
         </Link>
         <Link className={`${TextFont.className}  link`} href={"/gifts"}>
@@ -89,8 +89,8 @@ const Ribbon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 93px;
+  width: 47px;
+  height: 60px;
   position: absolute;
   right: 30px;
   top: 0;
@@ -103,8 +103,8 @@ const WhiteSpace = styled.div`
   background: white;
   transform: rotate(45deg) translateX(-50%);
   position: absolute;
-  left: 34%;
-  bottom: -97px;
+  left: 24%;
+  bottom: -112px;
   width: 85px;
   height: 85px;
 `;
