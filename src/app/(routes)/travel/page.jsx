@@ -3,7 +3,7 @@
 import { BiSolidBinoculars } from "react-icons/bi";
 import { FaTaxi, FaPlane, FaBinoculars } from "react-icons/fa";
 import React from "react";
-
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BiSolidMap, BiLinkExternal } from "react-icons/bi";
 
@@ -44,11 +44,16 @@ const page = () => {
           <LeftMiddleContent>
             <span
               className={HeadingFont.className}
-              style={{ fontSize: "55px" }}>
-              Travel & Tourism
+              style={{ fontSize: "70px" }}>
+              Travel
             </span>
 
-            <Categories>
+            <p className={TextFont.className}>
+              For any other recommendations and or questions, please contact
+              Denzil on 6574 675 55 971
+            </p>
+
+            {/* <Categories>
               <Category>
                 <Icon />
                 <CategoryText className={TextFont.className}>
@@ -67,7 +72,7 @@ const page = () => {
                   THINGS TO DO
                 </CategoryText>
               </Category>
-            </Categories>
+            </Categories> */}
           </LeftMiddleContent>
         </LeftMiddle>
 
@@ -137,19 +142,57 @@ const page = () => {
       </Container>
 
       <PhoneContainer className={TextFont.className}>
+        <Arrow>
+          <Link href={"/hotels"}>
+            <IconssContainer>
+              <svg
+                width='100%'
+                height='20px'
+                viewBox='0 0 56 87'
+                version='1.1'
+                xmlns='http://www.w3.org/2000/svg'>
+                <g>
+                  <line
+                    transform='rotate(101.38104248046875 27.750000000000004,63.24999999999999) '
+                    stroke='#fff'
+                    stroke-linecap='undefined'
+                    stroke-linejoin='undefined'
+                    id='svg_4'
+                    y2='83.75'
+                    x2='53.75'
+                    y1='42.75'
+                    x1='1.75'
+                    stroke-width='5'
+                    fill='none'></line>
+                  <line
+                    stroke-linecap='undefined'
+                    stroke-linejoin='undefined'
+                    id='svg_5'
+                    y2='41.75'
+                    x2='52.75'
+                    y1='0.75'
+                    x1='0.75'
+                    stroke-width='5'
+                    stroke='#fff'
+                    fill='none'></line>
+                </g>
+              </svg>
+            </IconssContainer>
+          </Link>
+        </Arrow>
         <PhoneHeader>
           <PhoneOverlay />
           <span
             className={HeadingFont.className}
             style={{
-              fontSize: "40px",
+              fontSize: "70px",
               color: "white",
               zIndex: "2",
-              marginTop: "20px",
             }}>
-            Travel & Tourism
+            Travel
           </span>
-          <PhoneIconContainer style={{ color: "white", zIndex: "2" }}>
+
+          {/* <PhoneIconContainer style={{ color: "white", zIndex: "2" }}>
             <PhoneCategories>
               <PhoneCategory>
                 <PhoneIcon />
@@ -164,7 +207,7 @@ const page = () => {
                 <PhoneCategoryText>THINGS TO DO</PhoneCategoryText>
               </PhoneCategory>
             </PhoneCategories>
-          </PhoneIconContainer>
+          </PhoneIconContainer> */}
         </PhoneHeader>
         <PhoneInfoContainer>
           <PhoneInfos style={{ marginTop: "30px" }}>
@@ -247,7 +290,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url("/hotelbg.jpeg");
+  background: url("/travelbg.jpg");
   background-size: cover;
   background-position: center;
 
@@ -276,11 +319,12 @@ const PhoneHeader = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
-  background: url("/hotelbg.jpeg");
+  height: 25vh;
+  background: url("/travelbg.jpg");
   background-size: cover;
-  background-position: center;
+
   align-items: center;
+  justify-content: center;
 `;
 
 const PhoneOverlay = styled.div`
@@ -290,6 +334,10 @@ const PhoneOverlay = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
+
+  @media (max-width: 1000px) {
+    opacity: 0.3;
+  }
 `;
 
 const PhoneIconContainer = styled.div`
@@ -518,4 +566,41 @@ const InfoLink = styled.a`
   color: black;
   font-size: 13px;
   text-decoration: underline;
+`;
+
+const Arrow = styled.div`
+  position: fixed;
+  bottom: 0px;
+  right: 48px;
+  display: none;
+  z-index: 3;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+`;
+
+const IconssContainer = styled.div`
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  background-color: #8a5636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s;
+  &:hover {
+    border: 1px solid white;
+  }
+
+  @media (max-width: 500px) {
+    bottom: 100px;
+  }
 `;

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BiSolidMap, BiLinkExternal } from "react-icons/bi";
 
@@ -34,6 +34,44 @@ const page = () => {
 
       <Navbar />
       <Container>
+        <Arrow>
+          <Link href={"/hotels"}>
+            <IconContainer>
+              <svg
+                width='100%'
+                height='20px'
+                viewBox='0 0 56 87'
+                version='1.1'
+                xmlns='http://www.w3.org/2000/svg'>
+                <g>
+                  <line
+                    transform='rotate(101.38104248046875 27.750000000000004,63.24999999999999) '
+                    stroke='#fff'
+                    stroke-linecap='undefined'
+                    stroke-linejoin='undefined'
+                    id='svg_4'
+                    y2='83.75'
+                    x2='53.75'
+                    y1='42.75'
+                    x1='1.75'
+                    stroke-width='5'
+                    fill='none'></line>
+                  <line
+                    stroke-linecap='undefined'
+                    stroke-linejoin='undefined'
+                    id='svg_5'
+                    y2='41.75'
+                    x2='52.75'
+                    y1='0.75'
+                    x1='0.75'
+                    stroke-width='5'
+                    stroke='#fff'
+                    fill='none'></line>
+                </g>
+              </svg>
+            </IconContainer>
+          </Link>
+        </Arrow>
         <BlackOverlay />
         <HotelContent>
           <HotelImage>
@@ -126,7 +164,7 @@ const page = () => {
               </div>
 
               <LinksContainer>
-                <h2>MAP TO VENUE</h2>
+                <h4>MAP TO VENUE</h4>
                 <BiLinkExternal />
               </LinksContainer>
               <LinksContainer>
@@ -362,4 +400,41 @@ const Seperation = styled.hr`
   top: 50%;
   background-color: black;
   transform: rotate(90deg) translate(-50%, -50%);
+`;
+
+const Arrow = styled.div`
+  position: fixed;
+  bottom: 0px;
+  right: 48px;
+  display: none;
+  z-index: 3;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
+`;
+
+const IconContainer = styled.div`
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  background-color: #8a5636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s;
+  &:hover {
+    border: 1px solid white;
+  }
+
+  @media (max-width: 500px) {
+    bottom: 100px;
+  }
 `;

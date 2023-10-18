@@ -16,7 +16,7 @@ const Navbar = () => {
     <NavbarContainer>
       <Link className={`${TextFont.className}  link`} href={"/rsvp"}>
         <Ribbon className={`${TextFont.className}`}>
-          RSVP
+          <span style={{ marginBottom: "10PX" }}>RSVP</span>
           <WhiteSpace />
         </Ribbon>
       </Link>
@@ -82,6 +82,7 @@ const LinksContainer = styled.div`
 
   @media (max-width: 500px) {
     width: 85%;
+    display: none;
   }
 `;
 
@@ -107,4 +108,20 @@ const WhiteSpace = styled.div`
   bottom: -112px;
   width: 85px;
   height: 85px;
+`;
+
+const MenuContainer = styled.div`
+  position: fixed;
+  left: -2000px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: #8a5636;
+  color: white;
 `;

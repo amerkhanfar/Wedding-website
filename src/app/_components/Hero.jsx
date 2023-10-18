@@ -117,7 +117,7 @@ const BackGroundImage = styled.div`
   background-repeat: no-repeat;
   animation-name: ${breatheAnimation};
   transition: background-image 1s ease-in-out;
-  animation-duration: 15s;
+  animation-duration: 21s;
   animation-iteration-count: infinite;
   position: absolute;
   width: 100vw;

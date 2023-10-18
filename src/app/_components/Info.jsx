@@ -137,15 +137,15 @@ const Info = () => {
           <Heading className={HeadingFont.className}>Countdown</Heading>
           <CountdownContainer>
             <CountdownTimer className={TextFont.className}>
-              <h2>{days}</h2>
+              <Number>{days}</Number>
               <div>Days</div>
             </CountdownTimer>
             <CountdownTimer className={TextFont.className}>
-              <h2>{hours}</h2>
+              <Number>{hours}</Number>
               <div>Hours</div>
             </CountdownTimer>
             <CountdownTimer className={TextFont.className}>
-              <h2>{minutes}</h2>
+              <Number>{minutes}</Number>
               <div>Minutes</div>
             </CountdownTimer>
           </CountdownContainer>
@@ -321,7 +321,7 @@ const ColorContainer = styled.div`
   gap: 4px;
 
   @media (max-width: 500px) {
-    flex-direction: column;
+    margin: 10px 0px;
   }
 `;
 
@@ -349,9 +349,8 @@ const CountdownContainer = styled.div`
   background-color: #e8e5e1;
 
   @media (max-width: 500px) {
-    flex-direction: column;
-
     align-items: center;
+    width: 90%;
   }
 `;
 
@@ -368,5 +367,15 @@ const CountdownTimer = styled.div`
 
   @media (max-width: 500px) {
     margin: 10px 0px;
+    width: 100px;
+    height: 100px;
+    font-size: 15px;
+  }
+`;
+
+const Number = styled.h2`
+  font-size: 50px;
+  @media (max-width: 500px) {
+    font-size: 20px;
   }
 `;
