@@ -35,17 +35,9 @@ const page = () => {
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
 
       <Navbar />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "20vh",
-          backgroundColor: "#e8e5e1",
-          width: "100vw",
-          height: "120vh",
-        }}>
+      <Container>
         <Rose />
-        <Inverted />
+
         <FormContainer>
           <Header>
             <BiSolidEnvelope size='30px' color='#245879' />
@@ -117,12 +109,21 @@ const page = () => {
             </SubmitContainer>
           </form>
         </FormContainer>
-      </div>
+      </Container>
     </AnimatePresence>
   );
 };
 
 export default page;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20vh;
+  background-color: #e8e5e1;
+  width: 100vw;
+  height: 80vh;
+`;
 
 const FormContainer = styled.div`
   width: 33vw;
@@ -144,8 +145,7 @@ const FormContainer = styled.div`
 const Rose = styled.div`
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("/rose.png");

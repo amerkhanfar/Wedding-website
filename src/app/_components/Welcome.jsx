@@ -15,7 +15,7 @@ const Welcome = () => {
       <WelcomeContent>
         <WelcomeImage></WelcomeImage>
         <WelcomeText>
-          <h1 className={HeadingFont.className}>Welcome</h1>
+          <Heading className={HeadingFont.className}>Welcome</Heading>
           <p
             className={TextFont.className}
             style={{ width: "80%", lineHeight: "1.2" }}>
@@ -43,6 +43,11 @@ const Container = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
+`;
+
+const Heading = styled.span`
+  font-size: 55px;
+  font-weight: 500;
 `;
 
 const WelcomeContent = styled.div`
