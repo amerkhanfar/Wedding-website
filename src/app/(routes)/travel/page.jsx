@@ -518,5 +518,5 @@ const InfoThird = styled.span`
 const InfoLink = styled.a`
   color: black;
   font-size: 13px;
-  text-decoration: none;
+  text-decoration: underline;
 `;
