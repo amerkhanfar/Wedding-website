@@ -261,15 +261,14 @@ const Container = styled.div`
 `;
 
 const PhoneContainer = styled.div`
-  display: none;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
   height: fit-content;
+  display: none;
 
   @media (max-width: 1000px) {
-    display: block;
+    display: flex;
   }
 `;
 
