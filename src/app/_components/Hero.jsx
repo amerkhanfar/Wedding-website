@@ -50,15 +50,11 @@ export const Hero = () => {
         </LogoContainer>
         <Overlay></Overlay>
         <HeroTextContainer>
-          <span className={TextFont.className} style={{ fontSize: "30px" }}>
+          <FirstLine className={TextFont.className}>
             WE’RE GETTING MARRIED
-          </span>
-          <span className={Epika.className} style={{ fontSize: "50px" }}>
-            DENZIL & MARLIANA
-          </span>
-          <span className={TextFont.className} style={{ fontSize: "20px" }}>
-            MARCH 16, 2024
-          </span>
+          </FirstLine>
+          <SecondLine className={Epika.className}>DENZIL & MARLIANA</SecondLine>
+          <ThirdLine className={TextFont.className}>MARCH 16, 2024</ThirdLine>
         </HeroTextContainer>
         <Link href={"/about"}>
           <IconContainer>
@@ -168,6 +164,7 @@ const HeroTextContainer = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 `;
 
 const IconContainer = styled.div`
@@ -193,4 +190,24 @@ const IconContainer = styled.div`
   @media (max-width: 500px) {
     bottom: 100px;
   }
+`;
+
+const FirstLine = styled.span`
+  font-size: 30px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+`;
+
+const SecondLine = styled.span`
+  font-size: 50px;
+
+  @media (max-width: 500px) {
+    font-size: 35px;
+  }
+`;
+
+const ThirdLine = styled.span`
+  font-size: 20px;
 `;
