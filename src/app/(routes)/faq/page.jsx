@@ -248,7 +248,7 @@ const Text = styled.div`
   flex-direction: column;
 
   @media (max-width: 500px) {
-    width: 100%;
+    width: 85%;
     text-align: center;
   }
 `;
