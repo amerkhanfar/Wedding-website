@@ -71,10 +71,12 @@ const page = () => {
             </IconContainer>
           </Link>
         </Arrow>
-        <Circle>
-          <For className={HeadingFont.className}>For Denzil & Marliana</For>
-        </Circle>
+
         <TextContainer>
+          <Olive src='/oliveshadow.png' />
+          <Circle>
+            <For className={HeadingFont.className}>For Denzil & Marliana</For>
+          </Circle>
           <Text>
             <Honey className={HeadingFont.className}>Honeyfund</Honey>
             <ThankyouText className={TextFont.className}>
@@ -124,7 +126,19 @@ const Container = styled.div`
   }
 `;
 
+const Olive = styled.img`
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  width: 400px;
+  height: 400px;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
 const TextContainer = styled.div`
+  position: relative;
   width: 50%;
   height: 100%;
   display: flex;
@@ -152,9 +166,9 @@ const Text = styled.div`
 const BackgroundImage = styled.div`
   height: 100%;
   width: 50vw;
-  background-image: url("./hero.jpg");
+  background-image: url("./giftsbg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
 
   @media (max-width: 500px) {
     width: 100vw;
@@ -164,17 +178,16 @@ const BackgroundImage = styled.div`
 
 const Circle = styled.div`
   background-color: #865636;
-  width: 170px;
-  height: 170px;
+  width: 80px;
+  height: 80px;
   padding: 20px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  right: 230px;
+  bottom: 120px;
   color: white;
 
   @media (max-width: 500px) {
@@ -183,7 +196,7 @@ const Circle = styled.div`
 `;
 
 const For = styled.span`
-  font-size: 30px;
+  font-size: 13px;
   font-weight: 500;
 `;
 
