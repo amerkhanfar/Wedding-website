@@ -315,8 +315,4 @@ const IconContainer = styled.div`
   &:hover {
     border: 1px solid white;
   }
-
-  @media (max-width: 500px) {
-    bottom: 70px;
-  }
 `;
