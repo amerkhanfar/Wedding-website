@@ -273,7 +273,7 @@ const IconContainer = styled.div`
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  bottom: 70px;
+  bottom: 35px;
   transform: translateX(-50%);
   background-color: #8a5636;
   display: flex;
