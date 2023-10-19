@@ -280,7 +280,8 @@ const DressCode = styled.div`
   @media (max-width: 500px) {
     flex-direction: column;
     height: fit-content;
-    margin-top: 50px;
+    margin-top: 15px;
+    margin-bottom: 40px;
   }
 `;
 

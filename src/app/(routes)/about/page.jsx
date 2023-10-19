@@ -64,16 +64,10 @@ const page = () => {
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
 
         <Navbar />
-        <div
-          style={{
-            display: "flex",
-            gap: "20vh",
-            flexDirection: "column",
-            backgroundColor: "#e8e5e1",
-          }}>
+        <AboutContent>
           <Welcome />
           <Info />
-        </div>
+        </AboutContent>
       </AnimatePresence>
     </div>
   );
@@ -115,5 +109,16 @@ const IconContainer = styled.div`
 
   @media (max-width: 500px) {
     bottom: 100px;
+  }
+`;
+
+const AboutContent = styled.div`
+  display: flex;
+  gap: 20vh;
+  flex-direction: column;
+  background-color: #e8e5e1;
+
+  @media (max-width: 500px) {
+    gap: 5vh;
   }
 `;
