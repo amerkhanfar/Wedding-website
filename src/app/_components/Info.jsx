@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
 import { BiSolidMap, BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
 import {
@@ -359,7 +360,7 @@ const CountdownContainer = styled.div`
 
   @media (max-width: 500px) {
     align-items: center;
-    width: 90%;
+    width: 85%;
   }
 `;
 
@@ -383,7 +384,7 @@ const CountdownTimer = styled.div`
   }
 `;
 
-const Number = styled.h2`
+const Number = styled.span`
   font-size: 50px;
   @media (max-width: 500px) {
     font-size: 20px;
