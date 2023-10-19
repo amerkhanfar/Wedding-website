@@ -34,7 +34,7 @@ const page = () => {
       <Navbar />
       <Container>
         <Arrow>
-          <Link href={"/faq"}>
+          <Link href={"/"}>
             <IconContainer>
               <svg
                 width='100%'
