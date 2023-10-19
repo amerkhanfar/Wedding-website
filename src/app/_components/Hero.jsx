@@ -14,13 +14,13 @@ import { AiFillRightCircle } from "react-icons/ai";
 const images = ["./hero.jpg", "./hero2.jpg"];
 export const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 10000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+  //   }, 10000);
 
-    return () => clearInterval(intervalId);
-  }, []); // Add interval as a dependency to useEffect
+  //   return () => clearInterval(intervalId);
+  // }, []);
   return (
     <AnimatePresence mode='wait'>
       <motion.div
@@ -102,9 +102,9 @@ export const Hero = () => {
 export default Hero;
 
 const breatheAnimation = keyframes`
-  0%   { transform: scale(1); }
-  50% { transform: scale(1.5);  }
-  100% { transform: scale(1);  }`;
+  0%   { background-position:center; transform: scale(2); }
+  50% { background-position:center; transform: scale(1);  }
+  100% { background-position:top; transform: scale(2);  }`;
 
 const Container = styled.div`
   width: 100vw;
@@ -120,7 +120,7 @@ const BackGroundImage = styled.div`
   background-position: center;
   animation-name: ${breatheAnimation};
   transition: background-image 1s ease-in-out;
-  animation-duration: 21s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   position: absolute;
   width: 100vw;

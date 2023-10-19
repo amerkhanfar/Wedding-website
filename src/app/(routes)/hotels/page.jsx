@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { BiSolidMap, BiLinkExternal } from "react-icons/bi";
+import { FaBriefcase, FaRegMoon } from "react-icons/fa";
 
 import Navbar from "@/app/_components/Navbar";
 import styled from "styled-components";
@@ -164,7 +165,11 @@ const page = () => {
               </div>
 
               <LinksContainer>
-                <h4>MAP TO VENUE</h4>
+                <a
+                  href='http://www.asara.co.za/'
+                  style={{ textDecoration: "none", color: "black" }}>
+                  MAP TO VENUE
+                </a>
                 <BiLinkExternal />
               </LinksContainer>
               <LinksContainer>
@@ -183,6 +188,9 @@ const page = () => {
       <SuggestionsContainer className={TextFont.className}>
         <Suggestions>
           <Suggestion>
+            <SuggestIconContainer>
+              <FaBriefcase />
+            </SuggestIconContainer>
             <span>CAPE TOWN HOTELS</span>
             <h3>Your City Landing</h3>
             <div>
@@ -196,8 +204,10 @@ const page = () => {
               Booking.com
             </a>
           </Suggestion>
-          <Seperation />
           <Suggestion>
+            <MoonIconContainer>
+              <FaRegMoon />
+            </MoonIconContainer>
             <span>AIRBNB</span>
             <h3>The Best Way to Stay</h3>
             <div>
@@ -212,7 +222,21 @@ const page = () => {
               Airbnbs in Cape town
             </a>
           </Suggestion>
+          <PhoneWhatsapp>
+            For any other recommendation, please contact Denzil on{" "}
+            <a href='/' style={{ color: "black" }}>
+              {" "}
+              Whatsapp
+            </a>
+          </PhoneWhatsapp>
         </Suggestions>
+        <Whatsapp>
+          For any other recommendation, please contact Denzil on{" "}
+          <a href='/' style={{ color: "black" }}>
+            {" "}
+            Whatsapp
+          </a>
+        </Whatsapp>
       </SuggestionsContainer>
     </AnimatePresence>
   );
@@ -227,7 +251,7 @@ const Container = styled.div`
   height: 77vh;
   display: flex;
   justify-content: center;
-  background-image: url("/hotelbg.jpeg");
+  background-image: url("/hotelbg2.jpeg");
   background-size: cover;
   background-position: center;
   @media (max-width: 500px) {
@@ -237,6 +261,7 @@ const Container = styled.div`
 
   @media (min-width: 1500px) {
     height: 87vh;
+    background-image: url("/hotelsbg2.jpeg");
   }
 `;
 
@@ -354,12 +379,14 @@ const LinksContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+
+  margin-top: 20px;
 `;
 
 const SuggestionsContainer = styled.div`
   position: relative;
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   background-color: #abb7ba;
@@ -374,17 +401,51 @@ const Suggestions = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   @media (max-width: 500px) {
     flex-direction: column;
     width: 90%;
   }
 `;
 
+const SuggestIconContainer = styled.div`
+  display: flex;
+  width: 100px;
+  height: 15px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -100px;
+  top: 0;
+
+  @media (max-width: 500px) {
+    left: 150px;
+    top: 1px;
+    right: 0;
+  }
+`;
+
+const MoonIconContainer = styled.div`
+  display: flex;
+  width: 100px;
+  height: 15px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -100px;
+  top: 0;
+
+  @media (max-width: 500px) {
+    left: 40px;
+    top: 2px;
+    right: 0;
+  }
+`;
+
 const Suggestion = styled.div`
-  width: 40%;
+  width: 42%;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (max-width: 500px) {
     width: 100%;
@@ -432,5 +493,26 @@ const IconContainer = styled.div`
   transition: all 0.3s;
   &:hover {
     border: 1px solid white;
+  }
+`;
+
+const Whatsapp = styled.div`
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-weight: 600;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+const PhoneWhatsapp = styled.div`
+  font-weight: 600;
+  margin-bottom: 50px;
+  display: none;
+  @media (max-width: 500px) {
+    display: block;
   }
 `;

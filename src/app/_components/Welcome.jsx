@@ -65,9 +65,10 @@ const WelcomeContent = styled.div`
 
 const WelcomeImage = styled.div`
   width: 45%;
-  background-image: url("/WelcomeImage.jpg");
+  background-image: url("/hero2.jpg");
   height: 85vh;
   background-size: cover;
+  background-position: center;
 
   @media (max-width: 500px) {
     height: 50vh;

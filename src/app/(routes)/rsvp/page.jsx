@@ -172,7 +172,9 @@ const Container = styled.div`
   gap: 20vh;
   background-color: #e8e5e1;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
+  max-height: 110vh;
+  overflow: hidden;
 `;
 
 const FormContainer = styled.div`
@@ -194,13 +196,14 @@ const FormContainer = styled.div`
 
 const Rose = styled.div`
   position: absolute;
-  right: 0;
-  bottom: 0;
+  z-index: 1;
+  right: -250px;
+  bottom: -200px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("/rose.png");
-  width: 150px;
-  height: 300px;
+  background-image: url("/oliveshadow.png");
+  width: 750px;
+  height: 750px;
 
   @media (max-width: 500px) {
     display: none;
