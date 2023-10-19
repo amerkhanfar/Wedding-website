@@ -250,7 +250,7 @@ const ThankyouText = styled.div`
 
   @media (max-width: 500px) {
     width: 80%;
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 

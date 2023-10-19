@@ -18,7 +18,45 @@ import {
 import { BiSolidEnvelope } from "react-icons/bi";
 
 const page = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [dateName, setDateName] = useState("");
+  const [dateEmail, setDateEmail] = useState("");
   const [hotDate, setHotDate] = useState("no");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log(name, email, dateName, dateEmail);
+
+    setName("");
+    setEmail("");
+    setDateName("");
+    setDateEmail("");
+
+    // try {
+    //   await axios.post(
+    //     "https://sdg.oplus.ae/api/save",
+    //     {
+    //       name,
+    //       email,
+    //       phone,
+    //       company_name: companyName,
+    //       image: sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"),
+    //       location: JSON.parse(localStorage.getItem("panel")),
+    //       pledge: textArea,
+    //     },
+    //     {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //     },
+    //   );
+    // } catch (error) {
+    //   console.log(error);
+    //   // show error message
+    // }
+  };
   return (
     <AnimatePresence mode='wait'>
       <motion.div
@@ -86,16 +124,30 @@ const page = () => {
               Your email is only shared with the event host.
             </span>
           </Header>
-          <form action='' style={{ width: "70%", position: "relative" }}>
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+            style={{ width: "70%", position: "relative" }}>
             <Input
               type='text'
               placeholder='Name'
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
               className={TextFont.className}
+              required
             />
             <Input
               type='Email'
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               placeholder='Email Address'
               className={TextFont.className}
+              required
             />
             <div className={TextFont.className} style={{ margin: "15px 0px" }}>
               Bringing a hot date?
@@ -138,10 +190,18 @@ const page = () => {
                   <Input
                     type='text'
                     placeholder='Name of your hot date'
+                    value={dateName}
+                    onChange={(e) => {
+                      setDateName(e.target.value);
+                    }}
                     className={TextFont.className}
                   />
                   <Input
                     type='Email'
+                    value={dateEmail}
+                    onChange={(e) => {
+                      setDateEmail(e.target.value);
+                    }}
                     placeholder='Email Address of your hot date'
                     className={TextFont.className}
                   />
