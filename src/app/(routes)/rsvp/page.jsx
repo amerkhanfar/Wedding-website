@@ -101,26 +101,38 @@ const page = () => {
               Bringing a hot date?
             </div>
             <div>
-              <input
-                type='radio'
-                name='subscribe'
-                value='yes'
-                id='yes'
-                onChange={() => setHotDate("yes")}
-              />
-              <label className={TextFont.className} for='subscribeNews'>
-                Yes
-              </label>
-              <input
-                type='radio'
-                name='subscribe'
-                value='no'
-                id='no'
-                onChange={() => setHotDate("no")}
-              />
-              <label className={TextFont.className} for='subscribeNews'>
-                No
-              </label>
+              <RadioContainer>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "5px",
+                  }}>
+                  <input
+                    type='radio'
+                    name='subscribe'
+                    value='yes'
+                    id='yes'
+                    style={{ width: "15px", height: "15px" }}
+                    onChange={() => setHotDate("yes")}
+                  />
+                  <label className={TextFont.className} for='subscribeNews'>
+                    Yes
+                  </label>
+                </div>
+                <input
+                  type='radio'
+                  name='subscribe'
+                  value='no'
+                  id='no'
+                  style={{ width: "15px", height: "15px" }}
+                  onChange={() => setHotDate("no")}
+                />
+                <label className={TextFont.className} for='subscribeNews'>
+                  No
+                </label>
+              </RadioContainer>
               {hotDate === "yes" ? (
                 <>
                   <Input
@@ -160,7 +172,7 @@ const Container = styled.div`
   gap: 20vh;
   background-color: #e8e5e1;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 `;
 
 const FormContainer = styled.div`
@@ -284,5 +296,15 @@ const IconContainer = styled.div`
   transition: all 0.3s;
   &:hover {
     border: 1px solid white;
+  }
+`;
+
+const RadioContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 500px) {
+    justify-content: center;
   }
 `;

@@ -184,7 +184,6 @@ const page = () => {
                 other recommendations and or assistance for arranging
                 transportation prior to the big day.
               </Answer>
-              <Line />
             </QuestionContainer>
           </Text>
         </TextContainer>
@@ -217,7 +216,7 @@ const Container = styled.div`
 const BackgroundImage = styled.div`
   height: 100%;
   width: 45%;
-  background-image: url("./hero.jpg");
+  background-image: url("./faabg.jpg");
   background-size: cover;
   background-position: center;
 

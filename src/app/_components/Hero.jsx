@@ -53,7 +53,9 @@ export const Hero = () => {
           <FirstLine className={TextFont.className}>
             WE’RE GETTING MARRIED
           </FirstLine>
-          <SecondLine className={Epika.className}>DENZIL & MARLIANA</SecondLine>
+          <SecondLine className={HeadingFont.className}>
+            Denzil & Marliana
+          </SecondLine>
           <ThirdLine className={TextFont.className}>MARCH 16, 2024</ThirdLine>
         </HeroTextContainer>
         <Link href={"/about"}>
@@ -115,6 +117,7 @@ const BackGroundImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   animation-name: ${breatheAnimation};
   transition: background-image 1s ease-in-out;
   animation-duration: 21s;
@@ -201,10 +204,10 @@ const FirstLine = styled.span`
 `;
 
 const SecondLine = styled.span`
-  font-size: 50px;
+  font-size: 65px;
 
   @media (max-width: 500px) {
-    font-size: 35px;
+    font-size: 40px;
   }
 `;
 

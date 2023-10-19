@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import "../styles/global.css";
+
 import {
   HeadingFont,
   TextFont,
@@ -107,20 +108,4 @@ const WhiteSpace = styled.div`
   bottom: -112px;
   width: 85px;
   height: 85px;
-`;
-
-const MenuContainer = styled.div`
-  position: fixed;
-  left: -2000px;
-  top: 0;
-  display: flex;
-  justify-content: center;
-`;
-
-const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  background-color: #8a5636;
-  color: white;
 `;

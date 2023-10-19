@@ -18,13 +18,13 @@ const Welcome = () => {
           <Heading className={HeadingFont.className}>Welcome</Heading>
           <p
             className={TextFont.className}
-            style={{ width: "80%", lineHeight: "1.2" }}>
+            style={{ width: "80%", lineHeight: "1.2", fontSize: "18px" }}>
             We are excited to welcome you, our loved ones, to attend our special
             day and where our hearts first met, Cape Town, South Africa.
           </p>{" "}
           <p
             className={TextFont.className}
-            style={{ width: "80%", lineHeight: "1.2" }}>
+            style={{ width: "80%", lineHeight: "1.2", fontSize: "18px" }}>
             From across the globe or down the road, we hope you can make the
             journey and help us in celebrating our new adventure as The
             Washington’s.
@@ -46,8 +46,9 @@ const Container = styled.div`
 `;
 
 const Heading = styled.span`
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 500;
+  margin-bottom: 15px;
 `;
 
 const WelcomeContent = styled.div`
@@ -75,13 +76,14 @@ const WelcomeImage = styled.div`
 `;
 
 const WelcomeText = styled.div`
-  background-color: #f8f7f5;
+  background-color: rgba(248, 247, 245, 0.7);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
-  height: 300px;
+  height: 350px;
+  z-index: 2;
 
   @media (max-width: 500px) {
     width: 100%;
@@ -90,12 +92,14 @@ const WelcomeText = styled.div`
 
 const Rose = styled.div`
   position: absolute;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-image: url("/rose.png");
-  width: 200px;
-  height: 250px;
+  z-index: 1;
+  right: -250px;
+  bottom: -400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/olivepattern.png");
+  width: 750px;
+  height: 750px;
 
   @media (max-width: 500px) {
     display: none;

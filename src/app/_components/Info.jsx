@@ -108,6 +108,7 @@ const Info = () => {
         </Information>
 
         <DressCode>
+          <Rose />
           <DressCodeContent>
             <div className={TextFont.className} style={{ fontSize: "13px" }}>
               DRESS CODE & COLOR THEME
@@ -266,11 +267,13 @@ const MapOutline = styled.div`
 `;
 
 const DressCode = styled.div`
+  position: relative;
   width: 100%;
   height: 150px;
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   justify-content: center;
+  z-index: 2;
   align-items: center;
   margin-bottom: 100px;
 
@@ -286,7 +289,8 @@ const DressCodeContent = styled.div`
   min-width: 80%;
   max-width: 80%;
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 2;
   justify-content: space-between;
   align-items: center;
 
@@ -333,6 +337,7 @@ const ColorCircle = styled.div`
 `;
 
 const Countdown = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -342,7 +347,7 @@ const Countdown = styled.div`
 `;
 
 const CountdownContainer = styled.div`
-  width: 100%;
+  width: 90%;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -362,7 +367,8 @@ const CountdownTimer = styled.div`
   align-items: center;
   height: 300px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #79807e;
+  color: white;
   font-size: 30px;
 
   @media (max-width: 500px) {
@@ -377,5 +383,21 @@ const Number = styled.h2`
   font-size: 50px;
   @media (max-width: 500px) {
     font-size: 20px;
+  }
+`;
+
+const Rose = styled.div`
+  position: absolute;
+  z-index: 1;
+  left: -350px;
+  bottom: -400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/upside.png");
+  width: 500px;
+  height: 500px;
+
+  @media (max-width: 500px) {
+    display: none;
   }
 `;

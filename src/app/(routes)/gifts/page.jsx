@@ -33,6 +33,7 @@ const page = () => {
 
       <Navbar />
       <Container>
+        <PhoneBackgroundImage />
         <Arrow>
           <Link href={"/faq"}>
             <IconContainer>
@@ -73,9 +74,9 @@ const page = () => {
         </Arrow>
 
         <TextContainer>
-          <Olive src='/oliveshadow.png' />
+          <Olive src='/olivepattern.png' />
           <Circle>
-            <For className={HeadingFont.className}>For Denzil & Marliana</For>
+            <For className={HeadingFont.className}>Thank you</For>
           </Circle>
           <Text>
             <Honey className={HeadingFont.className}>Honeyfund</Honey>
@@ -116,6 +117,7 @@ const Container = styled.div`
   background-color: #e8e5e1;
   width: 100vw;
   justify-content: space-between;
+  overflow: hidden;
 
   @media (max-width: 500px) {
     flex-direction: column;
@@ -128,13 +130,20 @@ const Container = styled.div`
 
 const Olive = styled.img`
   position: absolute;
-  right: 0;
-  bottom: 20px;
-  width: 400px;
-  height: 400px;
+  right: -59px;
+  bottom: -83px;
+  width: 500px;
+  height: 500px;
 
   @media (max-width: 500px) {
     display: none;
+  }
+
+  @media (min-width: 1600px) {
+    width: 750px;
+    height: 750px;
+    right: -88px;
+    bottom: -123px;
   }
 `;
 const TextContainer = styled.div`
@@ -173,31 +182,60 @@ const BackgroundImage = styled.div`
   @media (max-width: 500px) {
     width: 100vw;
     margin-top: 30px;
+    display: none;
+  }
+`;
+
+const PhoneBackgroundImage = styled.div`
+  height: 100%;
+  width: 50vw;
+  background-image: url("./giftsbg.jpg");
+  background-size: cover;
+  background-position: top;
+  display: none;
+
+  @media (max-width: 500px) {
+    height: 70vh;
+    width: 100vw;
+    display: block;
   }
 `;
 
 const Circle = styled.div`
   background-color: #865636;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   padding: 20px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 230px;
-  bottom: 120px;
+  right: 250px;
+  bottom: 59px;
   color: white;
 
   @media (max-width: 500px) {
     display: none;
   }
+
+  @media (min-width: 1600px) {
+    width: 96px;
+    height: 96px;
+    right: 347px;
+    bottom: 116px;
+  }
 `;
 
 const For = styled.span`
-  font-size: 13px;
+  font-size: 35px;
   font-weight: 500;
+  line-height: 15px;
+  text-align: center;
+
+  @media (min-width: 1600px) {
+    font-size: 38px;
+  }
 `;
 
 const Honey = styled.span`

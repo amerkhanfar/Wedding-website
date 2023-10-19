@@ -45,3 +45,21 @@ body {
     font-size: 16px;
   }
 }
+
+.menu-container {
+  position: fixed;
+  left: -2000px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+  width: 50vw;
+  height: 100%;
+  align-items: center;
+  z-index: 1000;
+  transition: left 0.7s ease-in-out;
+}
+
+.menu-container.show {
+  left: 0px;
+}
