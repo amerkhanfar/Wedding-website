@@ -102,10 +102,9 @@ const page = () => {
               <div style={{ lineHeight: "1.8", fontSize: "13px" }}>
                 To ensure that you can all enjoy the evening with us, we have
                 blocked rooms at the hotel for “the Washington Wedding” on the
-                night off, should you wish for a short walk back to bed after
-                the festivities and that hangover breakfast the next morning.
-                Arrangements and costs are for your own expense and on a
-                first-come-first-serve basis.
+                night off, should you wish for a short walk back to bed and that
+                hangover breakfast the next morning. Arrangements and costs are
+                for your own expense and on a first-come-first-serve basis.
               </div>
 
               <div
@@ -215,15 +214,15 @@ const page = () => {
               in Cape Town is through services like Airbnb. The city is full of
               short-term accommodation options located in incredible pockets of
               the city bowl, Atlantic seaboard, and nearby suburbs. We highly
-              recommend this option if you'd like to get the best bang for your
-              buck, while still enjoying premier lodgings.
+              recommend this option if you'd like to get the best value for
+              money, while still enjoying premier lodgings.
             </div>
             <a style={{ marginTop: "20px", color: "black" }} href='/'>
               Airbnbs in Cape town
             </a>
           </Suggestion>
           <PhoneWhatsapp>
-            For any other recommendation, please contact Denzil on{" "}
+            For any other recommendation, please contact Denzil via{" "}
             <a href='/' style={{ color: "black" }}>
               {" "}
               Whatsapp
@@ -231,7 +230,7 @@ const page = () => {
           </PhoneWhatsapp>
         </Suggestions>
         <Whatsapp>
-          For any other recommendation, please contact Denzil on{" "}
+          For any other recommendation, please contact Denzil via{" "}
           <a href='/' style={{ color: "black" }}>
             {" "}
             Whatsapp

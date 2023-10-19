@@ -2,6 +2,9 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Lottie from "lottie-react";
+import { useLottie } from "lottie-react";
+import Animation from "./Animation.json";
 import React, { useState } from "react";
 import Navbar from "@/app/_components/Navbar";
 import styled from "styled-components";
@@ -23,6 +26,12 @@ const page = () => {
   const [dateName, setDateName] = useState("");
   const [dateEmail, setDateEmail] = useState("");
   const [hotDate, setHotDate] = useState("no");
+
+  const options = {
+    animationData: Animation,
+  };
+
+  const { View } = useLottie(options);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,6 +83,16 @@ const page = () => {
 
       <Navbar />
       <Container>
+        {/* <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            zIndex: 3,
+            backgroundColor: "#e8e5e1",
+            position: "absolute",
+          }}>
+          {View}
+        </div> */}
         <Arrow>
           <Link href={"/hotels"}>
             <IconContainer>
@@ -116,11 +135,22 @@ const page = () => {
 
         <FormContainer>
           <Header>
-            <BiSolidEnvelope size='30px' color='#245879' />
-            <h3 className={TextFont.className}>
+            <BiSolidEnvelope
+              size='30px'
+              color='#245879'
+              style={{ marginBottom: "10px" }}
+            />
+            <h3
+              className={TextFont.className}
+              style={{ margin: 0, padding: 0 }}>
               PLEASE ENTER YOUR EMAIL TO RSVP
             </h3>
-            <span className={TextFont.className}>
+            <PleaseText className={TextFont.className}>
+              Please RSVP by January 6th, 2024
+            </PleaseText>
+            <span
+              className={TextFont.className}
+              style={{ marginTop: "10px", fontSize: "11px" }}>
               Your email is only shared with the event host.
             </span>
           </Header>
@@ -147,7 +177,6 @@ const page = () => {
               }}
               placeholder='Email Address'
               className={TextFont.className}
-              required
             />
             <div className={TextFont.className} style={{ margin: "15px 0px" }}>
               Bringing a hot date?
@@ -268,6 +297,13 @@ const Rose = styled.div`
   @media (max-width: 500px) {
     display: none;
   }
+`;
+
+const PleaseText = styled.span`
+  color: #245879;
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 700;
 `;
 
 const Inverted = styled.div`

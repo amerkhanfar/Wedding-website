@@ -97,12 +97,12 @@ const page = () => {
             <QuestionContainer>
               <Question>What should I wear?</Question>
               <Answer>
-                Semi-Formal leaning more towers Formal - but we ask No black, No
-                white & No jeans! Aim for the sweet spot between understated
-                dressy and classic. Think flowy dresses, well-tailored
-                jumpsuits, button-down shirts, suit jackets, and timeless
-                silhouettes. We welcome a little bowtie or set of suspenders to
-                complete the look!
+                Semi-Formal leaning more towards Formal - but we ask{" "}
+                <strong>No black, No white & No jeans!</strong> Aim for the
+                sweet spot between understated dressy and classic. Think flowy
+                dresses, well-tailored jumpsuits, button-down shirts, suit
+                jackets, and timeless silhouettes. We welcome a little bowtie or
+                set of suspenders to complete the look!
               </Answer>
               <Line />
             </QuestionContainer>
@@ -111,7 +111,7 @@ const page = () => {
               <Answer>
                 Attention all ladies! I strongly recommend that you do not wear
                 stiletto heels ! There are a bunch of grassy areas and a lot of
-                coble stones that you will have to walk over. A chunky heel/
+                cobble stones that you will have to walk over. A chunky heel/
                 wedge or sandals would help avoid ruining nice shoes or breaking
                 any ankles.
               </Answer>
@@ -124,7 +124,7 @@ const page = () => {
                 on the Estate. After entering the main gate from Polkadraai Rd.,
                 simply follow the road & signages as it will lead you straight
                 to the parking area. From the parking area special signages &
-                venue staff will directing you to the ceremony area.
+                venue staff will direct you to the ceremony area.
               </Answer>
               <Line />
             </QuestionContainer>
@@ -134,10 +134,10 @@ const page = () => {
                 Welcome to Cape Town, all of you out-of-towners! The weather
                 here can be very unpredictable. During the day, the weather in
                 Cape Town should be beautiful, as we will be nearing the end of
-                Summer, averaging 32 – 28 Degrees Celsius, but it can get chilly
-                at night. Please bring some warm layers for the evening, as
-                temperatures can dip to 15 or below. Don't forget a windbreaker
-                – they don’t call it the Windy City for nothing!
+                Summer, averaging 28 - 32 °C , but it can get chilly at night.
+                Please bring some warm layers for the evening, as temperatures
+                can dip to 15 °C or below. Don't forget a windbreaker – they
+                don’t call it the Windy City for nothing!
               </Answer>
               <Line />
             </QuestionContainer>

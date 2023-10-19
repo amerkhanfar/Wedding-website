@@ -48,9 +48,14 @@ const page = () => {
               Travel
             </span>
 
-            <p className={TextFont.className}>
+            <p
+              style={{ fontWeight: 600, fontStyle: "italic", fontSize: "13px" }}
+              className={TextFont.className}>
               For any other recommendations and or questions, please contact
-              Denzil on 6574 675 55 971
+              Denzil via{" "}
+              <a href='' style={{ color: "black" }}>
+                Whatsapp
+              </a>
             </p>
 
             {/* <Categories>

@@ -26,8 +26,8 @@ const Welcome = () => {
             className={TextFont.className}
             style={{ width: "80%", lineHeight: "1.2", fontSize: "18px" }}>
             From across the globe or down the road, we hope you can make the
-            journey and help us in celebrating our new adventure as The
-            Washington’s.
+            journey and help us in celebrating our new adventure as <br />{" "}
+            <strong>The Washington’s.</strong>
           </p>
         </WelcomeText>
       </WelcomeContent>
@@ -52,7 +52,7 @@ const Heading = styled.span`
 `;
 
 const WelcomeContent = styled.div`
-  width: 75%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@ const WelcomeContent = styled.div`
 `;
 
 const WelcomeImage = styled.div`
-  width: 45%;
+  width: 50%;
   background-image: url("/hero2.jpg");
   height: 85vh;
   background-size: cover;

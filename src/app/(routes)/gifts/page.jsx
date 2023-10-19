@@ -83,22 +83,23 @@ const page = () => {
             <ThankyouText className={TextFont.className}>
               We're so thankful that our friends and family are traveling to
               celebrate with us. Your presences on our big day in itself is a
-              gift! However, should you want to spoil us, we’d love to have it
-              be as a contribution to an experience that we’ll remember forever,
+              gift!
+            </ThankyouText>
+
+            <ThankyouText className={TextFont.className}>
+              However, should you want to spoil us, we’d love to have it be as a
+              cash contribution to an experience that we’ll remember forever,
               our dream honeymoon!
             </ThankyouText>
 
             <ThankyouText className={TextFont.className}>
-              Should you wish to contribute, you’re welcome to do so by using
-              the following details:
-            </ThankyouText>
-
-            <ThankyouText className={TextFont.className}>
-              EFT: DENZIL WASHINGTON{" "}
-            </ThankyouText>
-
-            <ThankyouText className={TextFont.className}>
-              (pending)
+              <span
+                className={HeadingFont.className}
+                style={{ fontSize: "30px" }}>
+                All our love,
+              </span>
+              <br />
+              <i>The Future Washington's</i>
             </ThankyouText>
           </Text>
         </TextContainer>
@@ -248,6 +249,7 @@ const ThankyouText = styled.div`
   width: 70%;
   margin: 15px 0;
   font-weight: 500;
+  font-size: 17px;
 
   @media (max-width: 500px) {
     width: 80%;

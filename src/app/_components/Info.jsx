@@ -48,7 +48,7 @@ const Info = () => {
             <div>
               <div className={TextFont.className}>SAT</div>
               <div className={TextFont.className} style={{ fontSize: "20px" }}>
-                MARCH 16
+                <strong> MARCH 16</strong>
               </div>
               <div className={TextFont.className}>2024</div>
             </div>
@@ -60,7 +60,9 @@ const Info = () => {
               -------------------
             </div>
             <div>
-              <div className={TextFont.className}>3:00PM - 12:00AM</div>
+              <div className={TextFont.className}>
+                <strong>3:00PM - 12:00AM</strong>
+              </div>
             </div>
 
             <Link
@@ -127,8 +129,8 @@ const Info = () => {
             </ColorContainer>
             <Line />
             <DresscodeRules className={TextFont.className}>
-              Semi-formal - think flowy dresses, botton down shirts, and
-              timeless silhouettes!{" "}
+              Semi-formal more towards formal - think flowy dresses, botton down
+              shirts, and timeless silhouettes! <br />
               <strong>No black, No white, No jeans.</strong>
             </DresscodeRules>
           </DressCodeContent>
@@ -169,7 +171,7 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 85%;
   align-items: start;
 
   @media (max-width: 500px) {
@@ -192,6 +194,7 @@ const Information = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  box-shadow: 3px 4px 4px 0px rgba(144, 144, 144, 0.79);
 
   @media (max-width: 500px) {
     height: fit-content;
@@ -368,7 +371,7 @@ const CountdownTimer = styled.div`
   align-items: center;
   height: 300px;
   border-radius: 50%;
-  background-color: #79807e;
+  background-color: #585e57;
   color: white;
   font-size: 30px;
 
