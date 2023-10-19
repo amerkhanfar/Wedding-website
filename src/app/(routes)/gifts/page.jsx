@@ -121,6 +121,7 @@ const Container = styled.div`
 
   @media (max-width: 500px) {
     flex-direction: column;
+    height: 90vh;
   }
 
   @media (min-width: 1600px) {
@@ -250,7 +251,7 @@ const ThankyouText = styled.div`
 
   @media (max-width: 500px) {
     width: 80%;
-    font-size: 14px;
+    font-size: 13px;
   }
 `;
 
