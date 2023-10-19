@@ -99,7 +99,11 @@ const page = () => {
                 <InfoThird>
                   We recommend flying into Cape Town International Airport!
                 </InfoThird>
-                <InfoLink href='/'>Cape Town International Airport</InfoLink>
+                <InfoLink
+                  href='https://capetown-airport.co.za/'
+                  target='_blank'>
+                  Cape Town International Airport
+                </InfoLink>
               </InfoText>
             </InfoContainer>
             <InfoContainer>
@@ -117,7 +121,11 @@ const page = () => {
                   options available at the airport. Be sure to ask for an
                   automatic if needed - the South African standard is manual.
                 </InfoThird>
-                <InfoLink href='/'>Avis Rent a Car</InfoLink>
+                <InfoLink
+                  href='https://www.avis.com/en/locations'
+                  target='_blank'>
+                  Avis Rent a Car
+                </InfoLink>
               </InfoText>
             </InfoContainer>
             <InfoContainer style={{ border: "none" }}>
@@ -137,7 +145,9 @@ const page = () => {
                   everywhere, and catching a tan on Clifton Beach.
                 </InfoThird>
                 <InfoThird>Here's another fabulous list of to-do's:</InfoThird>
-                <InfoLink href='https://insideguide.co.za/cape-town/to-do/'>
+                <InfoLink
+                  href='https://insideguide.co.za/cape-town/to-do/'
+                  target='_blank'>
                   https://insideguide.co.za/cape-town/to-do/
                 </InfoLink>
               </InfoText>

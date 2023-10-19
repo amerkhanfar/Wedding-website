@@ -90,10 +90,14 @@ const Info = () => {
             <p
               style={{ width: "50%", textAlign: "center" }}
               className={TextFont.className}>
-              +27 21 888 8000 http://www.asara.co.za/
+              <a style={{ color: "black" }} href='tel:+27218888000'>
+                +27 21 888 8000
+              </a>{" "}
+              http://www.asara.co.za/
             </p>
-
-            <BiLinkExternal color='#8a5636' />
+            <a href='http://www.asara.co.za/' target='_blank'>
+              <BiLinkExternal color='#8a5636' />
+            </a>
           </Location>
           <Map>
             <h3

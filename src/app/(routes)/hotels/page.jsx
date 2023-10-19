@@ -172,12 +172,13 @@ const page = () => {
                 <BiLinkExternal />
               </LinksContainer>
               <LinksContainer>
+                http://www.asara.co.za/
                 <a
                   href='http://www.asara.co.za/'
+                  target='_blank'
                   style={{ textDecoration: "none", color: "black" }}>
-                  http://www.asara.co.za/
+                  <BiLinkExternal />
                 </a>
-                <BiLinkExternal />
               </LinksContainer>
             </HotelText>
           </HotelTextContainer>
@@ -199,7 +200,10 @@ const page = () => {
               the city. It is by no means essential to stay in a hotel or
               somewhere fancy, but the list below falls within this category.
             </div>
-            <a style={{ marginTop: "20px", color: "black" }} href='/'>
+            <a
+              style={{ marginTop: "20px", color: "black" }}
+              href='https://www.booking.com/'
+              target='_blank'>
               Booking.com
             </a>
           </Suggestion>
@@ -217,7 +221,10 @@ const page = () => {
               recommend this option if you'd like to get the best value for
               money, while still enjoying premier lodgings.
             </div>
-            <a style={{ marginTop: "20px", color: "black" }} href='/'>
+            <a
+              style={{ marginTop: "20px", color: "black" }}
+              href='https://www.airbnb.com/'
+              target='_blank'>
               Airbnbs in Cape town
             </a>
           </Suggestion>
