@@ -104,7 +104,7 @@ export default Hero;
 const breatheAnimation = keyframes`
   0%   { background-position:center; transform: scale(2); }
   50% { background-position:center; transform: scale(1);  }
-  100% { background-position:top; transform: scale(2);  }`;
+  100% { background-position:top; transform: scale(1.5);  }`;
 
 const Container = styled.div`
   width: 100vw;
