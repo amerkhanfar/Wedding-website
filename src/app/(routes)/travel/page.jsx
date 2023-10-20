@@ -53,7 +53,10 @@ const page = () => {
               className={TextFont.className}>
               For any other recommendations and or questions, please contact
               Denzil via{" "}
-              <a href='' style={{ color: "black" }}>
+              <a
+                href='https://wa.me/+971568819474'
+                target='_blank'
+                style={{ color: "black" }}>
                 Whatsapp
               </a>
             </p>
@@ -149,6 +152,12 @@ const page = () => {
                   href='https://insideguide.co.za/cape-town/to-do/'
                   target='_blank'>
                   https://insideguide.co.za/cape-town/to-do/
+                </InfoLink>
+
+                <InfoLink
+                  href='https://www.capetown.travel/offical-cape-town-bucket-list/'
+                  target='_blank'>
+                  https://www.capetown.travel/offical-cape-town-bucket-list/
                 </InfoLink>
               </InfoText>
             </InfoContainer>
@@ -302,7 +311,7 @@ const Container = styled.div`
   background-color: #e8e5e1;
   position: relative;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background: url("/travelbg.jpg");

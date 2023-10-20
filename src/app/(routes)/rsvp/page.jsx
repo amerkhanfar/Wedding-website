@@ -177,6 +177,7 @@ const page = () => {
               }}
               placeholder='Email Address'
               className={TextFont.className}
+              required
             />
             <div className={TextFont.className} style={{ margin: "15px 0px" }}>
               Bringing a hot date?
@@ -209,6 +210,7 @@ const page = () => {
                   id='no'
                   style={{ width: "15px", height: "15px" }}
                   onChange={() => setHotDate("no")}
+                  required
                 />
                 <label className={TextFont.className} for='subscribeNews'>
                   No
@@ -224,6 +226,7 @@ const page = () => {
                       setDateName(e.target.value);
                     }}
                     className={TextFont.className}
+                    required
                   />
                   <Input
                     type='Email'
@@ -233,6 +236,7 @@ const page = () => {
                     }}
                     placeholder='Email Address of your hot date'
                     className={TextFont.className}
+                    required
                   />
                 </>
               ) : (

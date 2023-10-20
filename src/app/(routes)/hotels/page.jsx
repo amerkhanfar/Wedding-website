@@ -166,7 +166,8 @@ const page = () => {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <LinksContainer>
                   <a
-                    href='http://www.asara.co.za/'
+                    href='https://maps.app.goo.gl/ghqTTEwDwB6rJVgb7'
+                    target='_blank'
                     style={{ textDecoration: "none", color: "black" }}>
                     MAP TO VENUE
                   </a>
@@ -204,7 +205,7 @@ const page = () => {
             </div>
             <a
               style={{ marginTop: "20px", color: "black" }}
-              href='https://www.booking.com/'
+              href='https://www.booking.com/fivestars/city/za/cape-town.en-gb.html?label=gen173rf-1FCAMYyAEo-wE46wJIM1gDaAKIAQGYAQm4AQfIAQzYAQHoAQH4AQKIAgGiAg5hcHB5Y291cGxlLmNvbagCA7gCmeXJqQbAAgHSAiQ0NTlmOTg4My1mYmQ4LTQzOGEtYmU1ZS1mMzNkYWI1NWYyYjjYAgXgAgE&sid=10cbc3ac1c1339de25342e3b6a9060ac&keep_landing=1&'
               target='_blank'>
               Booking.com
             </a>
@@ -225,14 +226,17 @@ const page = () => {
             </div>
             <a
               style={{ marginTop: "20px", color: "black" }}
-              href='https://www.airbnb.com/'
+              href='https://www.airbnb.co.za/cape-town-south-africa/stays'
               target='_blank'>
               Airbnbs in Cape town
             </a>
           </Suggestion>
           <PhoneWhatsapp>
             For any other recommendation, please contact Denzil via{" "}
-            <a href='/' style={{ color: "black" }}>
+            <a
+              href='https://wa.me/+971 56 881 9474'
+              style={{ color: "black" }}
+              target='_blank'>
               {" "}
               Whatsapp
             </a>
