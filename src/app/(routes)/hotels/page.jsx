@@ -179,7 +179,7 @@ const page = () => {
                     <BiLinkExternal />
                   </a>
                 </LinksContainer>
-                <LinksContainers>
+                <LinksContainers style={{ marginBottom: "15px" }}>
                   http://www.asara.co.za/
                   <a
                     href='http://www.asara.co.za/'
@@ -269,7 +269,7 @@ const Container = styled.div`
   background-color: #e8e5e1;
   position: relative;
   width: 100vw;
-  height: 77vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   background-image: url("/hotelbg2.jpeg");
@@ -278,15 +278,16 @@ const Container = styled.div`
   @media (max-width: 500px) {
     background-image: none;
     height: fit-content;
+    padding-bottom: 0px;
   }
 
   @media (min-width: 1500px) {
-    height: 85vh;
+    height: fit-content;
     background-image: url("/hotelsbg2.jpeg");
   }
 
   @media (min-width: 1600px) {
-    height: 67vh;
+    height: fit-content;
     background-image: url("/hotelsbg2.jpeg");
   }
 `;

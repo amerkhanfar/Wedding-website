@@ -114,7 +114,7 @@ const Info = () => {
             <MapOutline>
               <BiSolidMap
                 color='#8a5636'
-                style={{ position: "absolute", left: "46px", bottom: 31 }}
+                style={{ position: "absolute", left: "24px", bottom: "23px" }}
               />
             </MapOutline>
           </Map>
@@ -140,7 +140,7 @@ const Info = () => {
             </ColorContainer>
             <Line />
             <DresscodeRules className={TextFont.className}>
-              Semi-formal more towards formal - think flowy dresses, botton down
+              Semi-formal more towards formal - think flowy dresses, button down
               shirts, and timeless silhouettes! <br />
               <strong>No black, No white, No jeans.</strong>
             </DresscodeRules>
