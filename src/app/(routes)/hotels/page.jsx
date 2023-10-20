@@ -123,7 +123,7 @@ const page = () => {
                   style={{
                     fontSize: "15px",
                   }}>
-                  Pending
+                  Michelle Devine
                 </span>
               </Contact>
               <Contact>
@@ -132,7 +132,7 @@ const page = () => {
                   style={{
                     fontSize: "15px",
                   }}>
-                  Pending
+                  +27 21 888 8000
                 </span>
               </Contact>
               <Contact>
@@ -141,7 +141,7 @@ const page = () => {
                   style={{
                     fontSize: "15px",
                   }}>
-                  Pending
+                  reservations@asara.co.za
                 </span>
               </Contact>
               <Contact>
@@ -150,7 +150,7 @@ const page = () => {
                   style={{
                     fontSize: "15px",
                   }}>
-                  Guest of the Washington Wedding ‘24
+                  www.asara.co.za
                 </span>
               </Contact>
 
@@ -244,7 +244,10 @@ const page = () => {
         </Suggestions>
         <Whatsapp>
           For any other recommendation, please contact Denzil via{" "}
-          <a href='https://wa.me/+971568819474' style={{ color: "black" }}>
+          <a
+            href='https://wa.me/+971568819474'
+            target='_blank'
+            style={{ color: "black" }}>
             {" "}
             Whatsapp
           </a>
