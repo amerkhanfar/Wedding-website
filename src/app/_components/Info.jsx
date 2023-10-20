@@ -114,7 +114,7 @@ const Info = () => {
             <MapOutline>
               <BiSolidMap
                 color='#8a5636'
-                style={{ position: "absolute", left: "24px", bottom: "23px" }}
+                style={{ position: "absolute", left: "26px", bottom: "25px" }}
               />
             </MapOutline>
           </Map>
