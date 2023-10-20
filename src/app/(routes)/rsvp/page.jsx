@@ -86,10 +86,16 @@ const page = () => {
         {/* <div
           style={{
             width: "100vw",
-            height: "100vh",
+            height: "20vh",
             zIndex: 3,
             backgroundColor: "#e8e5e1",
             position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-40%)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
           }}>
           {View}
         </div> */}
@@ -260,6 +266,7 @@ const page = () => {
 export default page;
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 20vh;

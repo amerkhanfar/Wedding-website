@@ -234,7 +234,7 @@ const page = () => {
           <PhoneWhatsapp>
             For any other recommendation, please contact Denzil via{" "}
             <a
-              href='https://wa.me/+971 56 881 9474'
+              href='https://wa.me/+971568819474'
               style={{ color: "black" }}
               target='_blank'>
               {" "}
@@ -244,7 +244,7 @@ const page = () => {
         </Suggestions>
         <Whatsapp>
           For any other recommendation, please contact Denzil via{" "}
-          <a href='/' style={{ color: "black" }}>
+          <a href='https://wa.me/+971568819474' style={{ color: "black" }}>
             {" "}
             Whatsapp
           </a>
