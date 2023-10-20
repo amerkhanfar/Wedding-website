@@ -141,7 +141,7 @@ const Olive = styled.img`
     display: none;
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1700px) {
     width: 750px;
     height: 750px;
     right: -88px;
