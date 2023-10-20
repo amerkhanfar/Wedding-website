@@ -99,7 +99,7 @@ const page = () => {
             <HotelText className={TextFont.className}>
               <h4 style={{ marginTop: "50px" }}>WEDDING VENUE</h4>
               <h5>Best Seat in The House</h5>
-              <div style={{ lineHeight: "1.8", fontSize: "13px" }}>
+              <div style={{ lineHeight: "1.8", fontSize: "15px" }}>
                 To ensure that you can all enjoy the evening with us, we have
                 blocked rooms at the hotel for “the Washington Wedding” on the
                 night off, should you wish for a short walk back to bed and that
@@ -110,7 +110,7 @@ const page = () => {
               <div
                 style={{
                   lineHeight: "1.8",
-                  fontSize: "13px",
+                  fontSize: "15px",
                   marginTop: "20px",
                   marginBottom: "10px",
                 }}>
@@ -121,7 +121,7 @@ const page = () => {
                 <img src='/person.png' alt='' width={40} height={40} />
                 <span
                   style={{
-                    fontSize: "13px",
+                    fontSize: "15px",
                   }}>
                   Pending
                 </span>
@@ -130,7 +130,7 @@ const page = () => {
                 <img src='/phone.png' alt='' width={40} height={40} />
                 <span
                   style={{
-                    fontSize: "13px",
+                    fontSize: "15px",
                   }}>
                   Pending
                 </span>
@@ -139,7 +139,7 @@ const page = () => {
                 <img src='/envelope.png' alt='' width={40} height={40} />
                 <span
                   style={{
-                    fontSize: "13px",
+                    fontSize: "15px",
                   }}>
                   Pending
                 </span>
@@ -148,7 +148,7 @@ const page = () => {
                 <img src='/hashtag.png' alt='' width={40} height={40} />
                 <span
                   style={{
-                    fontSize: "13px",
+                    fontSize: "15px",
                   }}>
                   Guest of the Washington Wedding ‘24
                 </span>
@@ -156,7 +156,7 @@ const page = () => {
 
               <div
                 style={{
-                  fontSize: "13px",
+                  fontSize: "15px",
                   marginTop: "18px",
                 }}>
                 Should the Hotel be fully booked and or looking for other
@@ -268,7 +268,7 @@ const Container = styled.div`
   }
 
   @media (min-width: 1500px) {
-    height: 80vh;
+    height: 85vh;
     background-image: url("/hotelsbg2.jpeg");
   }
 
@@ -476,7 +476,7 @@ const Suggestion = styled.div`
   position: relative;
 
   @media (max-width: 500px) {
-    width: 100%;
+    width: 82%;
     margin: 40px 0px;
   }
 `;
@@ -542,5 +542,6 @@ const PhoneWhatsapp = styled.div`
   display: none;
   @media (max-width: 500px) {
     display: block;
+    width: 82%;
   }
 `;

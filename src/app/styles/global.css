@@ -38,6 +38,10 @@ body {
   .link {
     font-size: 8px;
   }
+
+  .fixed {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1600px) {

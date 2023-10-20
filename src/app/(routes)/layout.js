@@ -12,17 +12,32 @@ import {
   EpikaMedium,
   EpikaBold,
 } from "../fonts/font";
-
+import Navbar from "../_components/Navbar";
 import StyledComponentsRegistry from "../lib/registry";
 import styled from "styled-components";
-import { BiMenu, BiXCircle } from "react-icons/bi";
+import { BiMenu, BiXCircle, BiX } from "react-icons/bi";
 import Link from "next/link";
 import "../styles/global.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function RootLayout({ children }) {
   const [menu, setMenu] = useState(false);
+  const [stickyClass, setStickyClass] = useState("hidden");
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 500 ? setStickyClass("fixed") : setStickyClass("hidden");
+    }
+  };
   return (
     <html lang='en'>
       <head>
@@ -43,8 +58,8 @@ export default function RootLayout({ children }) {
           <div className={`menu-container ${menu ? "show" : ""}`}>
             <Menu>
               <Close>
-                <BiXCircle
-                  size={"30px"}
+                <BiX
+                  size={"25px"}
                   color='black'
                   onClick={() => {
                     setMenu(false);
@@ -156,6 +171,18 @@ export default function RootLayout({ children }) {
               </Links>
             </Menu>
           </div>
+
+          <div className={`${stickyClass}`}>
+            <Navbar>
+              <MenuIconContainer
+                onClick={() => {
+                  setMenu(true);
+                }}>
+                <BiMenu size={"30px"} />
+                sjdnasdnaosdjaoisdjaosidjasoidj
+              </MenuIconContainer>
+            </Navbar>
+          </div>
           {children}
         </body>
       </StyledComponentsRegistry>
@@ -183,6 +210,7 @@ const Menu = styled.div`
   height: 90%;
   color: black;
   color: white;
+  z-index: 6;
 `;
 
 const MenuIconContainer = styled.div`
@@ -193,6 +221,7 @@ const MenuIconContainer = styled.div`
   justify-content: center;
   align-self: center;
   display: none;
+  z-index: 5;
 
   @media (max-width: 500px) {
     display: flex;

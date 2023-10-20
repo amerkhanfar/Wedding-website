@@ -59,6 +59,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   width: 100vw;
   padding-bottom: 10px;
+  position: relative;
 `;
 
 const LogoContainer = styled.div`

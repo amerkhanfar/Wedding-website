@@ -10,21 +10,6 @@ import Info from "@/app/_components/Info";
 import "../../styles/global.css";
 
 const page = () => {
-  const [stickyClass, setStickyClass] = useState("hidden");
-  useEffect(() => {
-    window.addEventListener("scroll", stickNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", stickNavbar);
-    };
-  }, []);
-
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 500 ? setStickyClass("fixed") : setStickyClass("hidden");
-    }
-  };
   return (
     <div style={{ overflowX: "hidden" }}>
       <Arrow>
@@ -78,9 +63,7 @@ const page = () => {
           animate={{ scaleX: 0 }}
           exit={{ scaleX: 0 }}
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
-        <div className={`${stickyClass}`}>
-          <Navbar style={{ backgroundColor: "white" }} />
-        </div>
+
         <Navbar />
         <AboutContent>
           <Welcome />
