@@ -46,6 +46,27 @@ export default function RootLayout({ children }) {
           name='description'
           content='We are excited to welcome you, our loved ones, to attend our special day and where our hearts first met, Cape Town, South Africa. From across the globe or down the road, we hope you can make the journey and help us in celebrating our new adventure as The Washington’s.'
         />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/favicons/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicons/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicons/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/favicons/site.webmanifest' />
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
+        <meta name='msapplication-TileColor' content='#da532c' />
+        <meta name='theme-color' content='#ffffff'></meta>
       </head>
       <StyledComponentsRegistry>
         <body style={{ margin: "0", padding: 0 }}>
