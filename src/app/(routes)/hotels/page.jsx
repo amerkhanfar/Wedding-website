@@ -150,7 +150,7 @@ const page = () => {
                   style={{
                     fontSize: "15px",
                   }}>
-                  www.asara.co.za
+                  Guest of the Washington Wedding'24
                 </span>
               </Contact>
 
@@ -200,7 +200,7 @@ const page = () => {
             <SuggestIconContainer>
               <FaBriefcase />
             </SuggestIconContainer>
-            <h3>CAPE TOWN HOTELS</h3>
+            <h4 style={{ margin: 0 }}>CAPE TOWN HOTELS</h4>
             <h5>Your City Landing</h5>
             <div>
               Our recommendations for the before-and-after legs of your South
@@ -220,7 +220,7 @@ const page = () => {
             <MoonIconContainer>
               <FaRegMoon />
             </MoonIconContainer>
-            <h3>AIRBNB</h3>
+            <h4 style={{ margin: 0 }}>AIRBNB</h4>
             <h5>The Best Way to Stay</h5>
             <div>
               While everyone loves the luxury of a hotel, the best way to stay
@@ -456,11 +456,11 @@ const SuggestIconContainer = styled.div`
   align-items: center;
   position: absolute;
   left: -100px;
-  top: 22px;
+  top: 0px;
 
   @media (max-width: 500px) {
     left: 172px;
-    top: 22px;
+    top: 0px;
     right: 0;
   }
 `;
@@ -473,11 +473,11 @@ const MoonIconContainer = styled.div`
   align-items: center;
   position: absolute;
   left: -100px;
-  top: 22px;
+  top: 0px;
 
   @media (max-width: 500px) {
     left: 40px;
-    top: 22px;
+    top: 0px;
     right: 0;
   }
 `;

@@ -229,7 +229,7 @@ const Date = styled.div`
     height: 300px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #8a5636;
+
     padding-bottom: 10px;
     gap: 50px;
     margin-top: 20px;
@@ -247,9 +247,10 @@ const Location = styled.div`
 
   @media (max-width: 500px) {
     width: 100%;
-    border-bottom: 1px solid #8a5636;
+
     padding-bottom: 10px;
     gap: 0px;
+    background-color: #e8e5e1;
   }
 `;
 

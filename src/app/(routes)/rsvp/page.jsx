@@ -146,7 +146,7 @@ const page = () => {
           <Header>
             <BiSolidEnvelope
               size='30px'
-              color='#245879'
+              color='#768746'
               style={{ marginBottom: "10px" }}
             />
             <h3
@@ -314,7 +314,7 @@ const Rose = styled.div`
 `;
 
 const PleaseText = styled.span`
-  color: #245879;
+  color: #768746;
   margin-top: 20px;
   font-style: italic;
   font-weight: 700;
@@ -366,7 +366,7 @@ const SubmitContainer = styled.div`
 `;
 
 const Submit = styled.input`
-  background-color: #245879;
+  background-color: #768746;
   border: none;
   color: white;
   width: 80px;

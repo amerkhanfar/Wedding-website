@@ -298,6 +298,18 @@ const page = () => {
                 </InfoLink>
               </PhoneInfoText>
             </PhoneInfo>
+
+            <div style={{ marginBottom: "30px" }}>
+              {" "}
+              For any other recommendation, please contact Denzil via{" "}
+              <a
+                href='https://wa.me/+971568819474'
+                target='_blank'
+                style={{ color: "black" }}>
+                {" "}
+                Whatsapp
+              </a>
+            </div>
           </PhoneInfos>
         </PhoneInfoContainer>
       </PhoneContainer>
