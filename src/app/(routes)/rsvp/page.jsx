@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import { useLottie } from "lottie-react";
@@ -38,33 +39,35 @@ const page = () => {
 
     console.log(name, email, dateName, dateEmail);
 
-    setName("");
-    setEmail("");
-    setDateName("");
-    setDateEmail("");
-
-    // try {
-    //   await axios.post(
-    //     "https://sdg.oplus.ae/api/save",
-    //     {
-    //       name,
-    //       email,
-    //       phone,
-    //       company_name: companyName,
-    //       image: sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"),
-    //       location: JSON.parse(localStorage.getItem("panel")),
-    //       pledge: textArea,
-    //     },
-    //     {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //     },
-    //   );
-    // } catch (error) {
-    //   console.log(error);
-    //   // show error message
-    // }
+    try {
+      await axios.post(
+        "https://oplus.dev/apps/lana/api/save",
+        {
+          name,
+          email,
+          hot_date: hotDate,
+          hot_date_name: dateName,
+          hot_date_email: dateEmail,
+          // phone,
+          // company_name: companyName,
+          // image: sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"),
+          // location: JSON.parse(localStorage.getItem("panel")),
+          // pledge: textArea,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+      console.log("success");
+      setName("");
+      setEmail("");
+      setDateName("");
+      setDateEmail("");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <AnimatePresence mode='wait'>
