@@ -103,7 +103,13 @@ const Info = () => {
             <h3
               className={TextFont.className}
               style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              MAP TO VENUE <BiLinkExternal color='#8a5636' />
+              MAP TO VENUE{" "}
+              <a
+                href='https://www.google.com/maps/place/Asara+Wine+Estate+%26+Hotel/@-33.9492945,18.8125494,15z/data=!4m9!3m8!1s0x1dcdb2cc5d076231:0x604c4d9ae0871e7f!5m2!4m1!1i2!8m2!3d-33.9492945!4d18.8125494!16s%2Fg%2F1tsvw85l?entry=tts'
+                target='_blank'
+                style={{ zIndex: 1000 }}>
+                <BiLinkExternal color='#8a5636' />
+              </a>
             </h3>
             <MapOutline>
               <BiSolidMap

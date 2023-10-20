@@ -171,7 +171,13 @@ const page = () => {
                     style={{ textDecoration: "none", color: "black" }}>
                     MAP TO VENUE
                   </a>
-                  <BiLinkExternal />
+
+                  <a
+                    href='https://maps.app.goo.gl/ghqTTEwDwB6rJVgb7'
+                    target='_blank'
+                    style={{ textDecoration: "none", color: "black" }}>
+                    <BiLinkExternal />
+                  </a>
                 </LinksContainer>
                 <LinksContainers>
                   http://www.asara.co.za/
