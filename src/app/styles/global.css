@@ -63,3 +63,19 @@ body {
 .menu-container.show {
   left: 0px;
 }
+
+.hidden {
+  position: fixed;
+  top: -1000px;
+  transition: all 0.7s;
+  background-color: white;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.7s;
+  background-color: white;
+  z-index: 50;
+}

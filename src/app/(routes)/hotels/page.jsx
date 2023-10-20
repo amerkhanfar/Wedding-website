@@ -163,23 +163,25 @@ const page = () => {
                 options please see below.
               </div>
 
-              <LinksContainer>
-                <a
-                  href='http://www.asara.co.za/'
-                  style={{ textDecoration: "none", color: "black" }}>
-                  MAP TO VENUE
-                </a>
-                <BiLinkExternal />
-              </LinksContainer>
-              <LinksContainer>
-                http://www.asara.co.za/
-                <a
-                  href='http://www.asara.co.za/'
-                  target='_blank'
-                  style={{ textDecoration: "none", color: "black" }}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <LinksContainer>
+                  <a
+                    href='http://www.asara.co.za/'
+                    style={{ textDecoration: "none", color: "black" }}>
+                    MAP TO VENUE
+                  </a>
                   <BiLinkExternal />
-                </a>
-              </LinksContainer>
+                </LinksContainer>
+                <LinksContainers>
+                  http://www.asara.co.za/
+                  <a
+                    href='http://www.asara.co.za/'
+                    target='_blank'
+                    style={{ textDecoration: "none", color: "black" }}>
+                    <BiLinkExternal />
+                  </a>
+                </LinksContainers>
+              </div>
             </HotelText>
           </HotelTextContainer>
         </HotelContent>
@@ -191,8 +193,8 @@ const page = () => {
             <SuggestIconContainer>
               <FaBriefcase />
             </SuggestIconContainer>
-            <span>CAPE TOWN HOTELS</span>
-            <h3>Your City Landing</h3>
+            <h3>CAPE TOWN HOTELS</h3>
+            <h5>Your City Landing</h5>
             <div>
               Our recommendations for the before-and-after legs of your South
               African trip. Please note that these properties are enjoyed as an
@@ -211,8 +213,8 @@ const page = () => {
             <MoonIconContainer>
               <FaRegMoon />
             </MoonIconContainer>
-            <span>AIRBNB</span>
-            <h3>The Best Way to Stay</h3>
+            <h3>AIRBNB</h3>
+            <h5>The Best Way to Stay</h5>
             <div>
               While everyone loves the luxury of a hotel, the best way to stay
               in Cape Town is through services like Airbnb. The city is full of
@@ -266,7 +268,12 @@ const Container = styled.div`
   }
 
   @media (min-width: 1500px) {
-    height: 87vh;
+    height: 80vh;
+    background-image: url("/hotelsbg2.jpeg");
+  }
+
+  @media (min-width: 1600px) {
+    height: 67vh;
     background-image: url("/hotelsbg2.jpeg");
   }
 `;
@@ -389,16 +396,31 @@ const LinksContainer = styled.div`
   margin-top: 20px;
 `;
 
+const LinksContainers = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5px;
+`;
+
 const SuggestionsContainer = styled.div`
   position: relative;
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   background-color: #abb7ba;
 
   @media (max-width: 500px) {
     height: fit-content;
+  }
+
+  @media (min-width: 1500px) {
+    height: 55vh;
+  }
+
+  @media (min-width: 1600px) {
+    height: 45vh;
   }
 `;
 
@@ -421,11 +443,11 @@ const SuggestIconContainer = styled.div`
   align-items: center;
   position: absolute;
   left: -100px;
-  top: 0;
+  top: 22px;
 
   @media (max-width: 500px) {
-    left: 150px;
-    top: 1px;
+    left: 172px;
+    top: 22px;
     right: 0;
   }
 `;
@@ -438,11 +460,11 @@ const MoonIconContainer = styled.div`
   align-items: center;
   position: absolute;
   left: -100px;
-  top: 0;
+  top: 22px;
 
   @media (max-width: 500px) {
     left: 40px;
-    top: 2px;
+    top: 22px;
     right: 0;
   }
 `;

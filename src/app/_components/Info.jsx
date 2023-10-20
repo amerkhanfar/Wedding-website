@@ -240,7 +240,6 @@ const Location = styled.div`
   text-align: center;
 
   @media (max-width: 500px) {
-    height: 300px;
     width: 100%;
     border-bottom: 1px solid #8a5636;
     padding-bottom: 10px;

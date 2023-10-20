@@ -222,6 +222,8 @@ const BackgroundImage = styled.div`
 
   @media (max-width: 500px) {
     width: 100vw;
+    background-image: url("./mobilefaabg.jpg");
+    background-position: top;
   }
 `;
 
