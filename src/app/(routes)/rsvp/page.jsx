@@ -381,6 +381,10 @@ const Input = styled.input`
   outline: none;
   margin: 10px 0px;
   padding: 0;
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const SubmitContainer = styled.div`
