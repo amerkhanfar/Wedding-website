@@ -102,13 +102,15 @@ const page = () => {
               transform: "translate(-50%,-40%)",
               display: "flex",
               justifyContent: "center",
-              alignItems: "flex-start",
+              alignItems: "center",
             }}>
             <Lottie
               play
               animationData={thankYouMessage}
               loop={false}
               onComplete={() => setStartAnimation(false)}
+              width={"500px"}
+              height={"500px"}
             />
           </div>
         ) : null}
@@ -117,16 +119,16 @@ const page = () => {
           <div
             style={{
               width: "100vw",
-              height: "150vh",
+              height: "100vh",
               zIndex: 3,
               backgroundColor: "#e8e5e1",
               position: "absolute",
-              top: "59%",
+              top: "25%",
               left: "50%",
               transform: "translate(-50%,-40%)",
               display: "flex",
               justifyContent: "center",
-              alignItems: "flex-start",
+              alignItems: "center",
             }}>
             <InfinitySpin width='200' color='#8a5636' />
           </div>
