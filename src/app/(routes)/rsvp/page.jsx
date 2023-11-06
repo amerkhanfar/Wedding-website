@@ -117,18 +117,18 @@ const page = () => {
           <div
             style={{
               width: "100vw",
-              height: "100vh",
+              height: "150vh",
               zIndex: 3,
               backgroundColor: "#e8e5e1",
               position: "absolute",
-              top: "25%",
+              top: "59%",
               left: "50%",
               transform: "translate(-50%,-40%)",
               display: "flex",
               justifyContent: "center",
               alignItems: "flex-start",
             }}>
-            <InfinitySpin width='200' color='#4fa94d' />
+            <InfinitySpin width='200' color='#8a5636' />
           </div>
         ) : null}
         <Arrow>
