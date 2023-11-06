@@ -46,6 +46,9 @@ export default function RootLayout({ children }) {
           name='description'
           content='We are excited to welcome you, our loved ones, to attend our special day and where our hearts first met, Cape Town, South Africa. From across the globe or down the road, we hope you can make the journey and help us in celebrating our new adventure as The Washington’s.'
         />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1, maximum-scale=1'></meta>
         <link
           rel='apple-touch-icon'
           sizes='180x180'
