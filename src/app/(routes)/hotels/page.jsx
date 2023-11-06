@@ -102,7 +102,7 @@ const page = () => {
               <div style={{ lineHeight: "1.8", fontSize: "15px" }}>
                 To ensure that you can all enjoy the evening with us, we have
                 blocked rooms at the hotel for “the Washington Wedding” on the
-                night off, should you wish for a short walk back to bed and that
+                night of, should you wish for a short walk back to bed and that
                 hangover breakfast the next morning. Arrangements and costs are
                 for your own expense and on a first-come-first-serve basis.
               </div>
