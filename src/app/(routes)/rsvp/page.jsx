@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { InfinitySpin } from "react-loader-spinner";
 import axios from "axios";
 import Link from "next/link";
 import Lottie from "lottie-react";
@@ -20,6 +21,7 @@ import {
 } from "../../fonts/font";
 
 import { BiSolidEnvelope } from "react-icons/bi";
+import thankYouMessage from "./Animation.json";
 
 const page = () => {
   const [name, setName] = useState("");
@@ -27,17 +29,17 @@ const page = () => {
   const [dateName, setDateName] = useState("");
   const [dateEmail, setDateEmail] = useState("");
   const [hotDate, setHotDate] = useState("no");
+  const [startAnimation, setStartAnimation] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const options = {
     animationData: Animation,
+    onComplete: () => console.log("hi"),
   };
-
-  const { View } = useLottie(options);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(name, email, dateName, dateEmail);
+    setLoading(true);
 
     try {
       await axios.post(
@@ -65,6 +67,8 @@ const page = () => {
       setEmail("");
       setDateName("");
       setDateEmail("");
+      setStartAnimation(true);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -83,25 +87,50 @@ const page = () => {
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 0 }}
         transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}></motion.div>
-
       <Navbar />
       <Container>
-        {/* <div
-          style={{
-            width: "100vw",
-            height: "20vh",
-            zIndex: 3,
-            backgroundColor: "#e8e5e1",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%,-40%)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-          }}>
-          {View}
-        </div> */}
+        {startAnimation ? (
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              zIndex: 3,
+              backgroundColor: "#e8e5e1",
+              position: "absolute",
+              top: "25%",
+              left: "50%",
+              transform: "translate(-50%,-40%)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-start",
+            }}>
+            <Lottie
+              play
+              animationData={thankYouMessage}
+              loop={false}
+              onComplete={() => setStartAnimation(false)}
+            />
+          </div>
+        ) : null}
+
+        {loading ? (
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              zIndex: 3,
+              backgroundColor: "#e8e5e1",
+              position: "absolute",
+              top: "25%",
+              left: "50%",
+              transform: "translate(-50%,-40%)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-start",
+            }}>
+            <InfinitySpin width='200' color='#4fa94d' />
+          </div>
+        ) : null}
         <Arrow>
           <Link href={"/hotels"}>
             <IconContainer>
