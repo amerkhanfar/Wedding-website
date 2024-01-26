@@ -323,6 +323,8 @@ const Menu = styled.a`
   @media (max-width: 768px) {
     color: white;
     z-index: 5;
+    top: 50px;
+    bottom: auto;
   }
 `;
 
