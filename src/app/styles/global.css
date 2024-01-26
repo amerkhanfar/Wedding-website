@@ -83,3 +83,15 @@ body {
   background-color: white;
   z-index: 50;
 }
+
+@media (max-width: 748px) {
+  ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+  ::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: white;
+  }
+}
