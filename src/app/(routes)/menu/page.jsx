@@ -332,7 +332,7 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
   position: absolute;
   left: 0;
   top: 0;
