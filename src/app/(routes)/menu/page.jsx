@@ -390,11 +390,12 @@ const HalfInput = styled.input`
     background-color: transparent;
     color: white;
     border-bottom: 1px solid white;
+    font-size: 16px;
   }
 `;
 
 const FullInput = styled.input`
-  width: 97%;
+  width: 96%;
   border: none;
   border-bottom: 1px solid grey;
   padding: 10px 3px;
@@ -404,6 +405,7 @@ const FullInput = styled.input`
     background-color: transparent;
     color: white;
     border-bottom: 1px solid white;
+    font-size: 16px;
   }
 `;
 
@@ -418,6 +420,7 @@ const Select = styled.select`
     background-color: transparent;
     color: white;
     border-bottom: 1px solid white;
+    font-size: 16px;
   }
 `;
 
