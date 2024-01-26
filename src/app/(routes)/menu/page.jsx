@@ -414,6 +414,7 @@ const Select = styled.select`
   border: none;
   border-bottom: 1px solid grey;
   padding: 10px 0px;
+  -webkit-appearance: none;
 
   @media (max-width: 768px) {
     width: 26%;
@@ -429,6 +430,7 @@ const SelectHalf = styled.select`
   border: none;
   border-bottom: 1px solid grey;
   padding: 10px 0px;
+  -webkit-appearance: none;
 
   @media (max-width: 768px) {
     background-color: transparent;
