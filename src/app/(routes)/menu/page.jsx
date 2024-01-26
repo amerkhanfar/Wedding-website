@@ -169,9 +169,7 @@ export default function Page() {
                     STARTER
                   </Option>
                   <Option value="1">1</Option>
-                  <Option disabled value={""}>
-                    VEGAN
-                  </Option>
+                  <Option disabled>VEGAN</Option>
                   <Option value="2">2</Option>
                 </Select>
                 <Select
@@ -187,9 +185,7 @@ export default function Page() {
                     MAIN
                   </option>
                   <option value="1">1</option>
-                  <option disabled value={""}>
-                    VEGAN
-                  </option>
+                  <option disabled>VEGAN</option>
                   <option value="2">2</option>
                 </Select>
 
@@ -206,9 +202,7 @@ export default function Page() {
                     DESSERT
                   </option>
                   <option value="1">1</option>
-                  <option disabled value={""}>
-                    VEGAN
-                  </option>
+                  <option disabled>VEGAN</option>
                   <option value="2">2</option>
                 </Select>
 
