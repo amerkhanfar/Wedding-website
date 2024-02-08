@@ -198,7 +198,7 @@ export default function Page() {
                   name="dessert"
                   required
                 >
-                  <option disabled selected value={""}>
+                  <option disabled selected hidden="true" value={""}>
                     DESSERT
                   </option>
                   <option value="1">1</option>
