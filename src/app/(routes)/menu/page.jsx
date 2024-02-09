@@ -108,7 +108,7 @@ export default function Page() {
 
           <FormContainer>
             <Menu
-              href="/dummy.pdf"
+              href="/pdf.pdf"
               target="_blank"
               className={TextFont.className}
             >
@@ -117,11 +117,17 @@ export default function Page() {
             <Overlay />
             <FormSub>
               <h2
-                style={{ alignSelf: "center", letterSpacing: "5px" }}
+                style={{ alignSelf: "center", letterSpacing: "3px" }}
                 className={TextFont.className}
               >
-                RSVP
+                WE EAT
               </h2>
+              <h4
+                style={{ alignSelf: "center" }}
+                className={TextFont.className}
+              >
+                Please complete by 16 February 2024.
+              </h4>
               <Form onSubmit={createTodo} className={HeadingFont.className}>
                 <HalfInput
                   value={name}
@@ -154,7 +160,8 @@ export default function Page() {
                   className={TextFont.className}
                 />
                 <Text className={TextFont.className}>
-                  *We will provide bla bla bla
+                  Please select 1 option for each course below, see the menu for
+                  more details.
                 </Text>
                 <Select
                   value={starter}
@@ -168,9 +175,25 @@ export default function Page() {
                   <Option disabled selected value={""}>
                     STARTER
                   </Option>
-                  <Option value="1">1</Option>
-                  <Option disabled>VEGAN</Option>
-                  <Option value="2">2</Option>
+                  <Option value="Tuna Tar-Tar">Tuna Tar-Tar</Option>
+                  <Option value="Cape Hope Baby Chokka">
+                    Cape Hope Baby Chokka
+                  </Option>
+                  <Option value="Smoked Springbok Carpaccio">
+                    Smoked Springbok Carpaccio
+                  </Option>
+                  <Option disabled style={{ color: "red" }}>
+                    VEGAN *
+                  </Option>
+                  <Option value="Candy Beetroot Salad">
+                    Candy Beetroot Salad
+                  </Option>
+                  <Option value="Coconut Cauliflower Bites">
+                    Coconut Cauliflower Bites
+                  </Option>
+                  <Option value="Avocado Aioli Toast">
+                    Avocado Aioli Toast
+                  </Option>
                 </Select>
                 <Select
                   value={main}
@@ -184,9 +207,17 @@ export default function Page() {
                   <option disabled selected value={""}>
                     MAIN
                   </option>
-                  <option value="1">1</option>
+                  <option value="Braised Pork Belly">Braised Pork Belly</option>
+                  <option value="Karoo Lamb Chops">Karoo Lamb Chops</option>
+                  <option value="Elgin Chicken Supreme">
+                    Elgin Chicken Supreme
+                  </option>
                   <option disabled>VEGAN</option>
-                  <option value="2">2</option>
+                  <option value="Butternut Risotto">Butternut Risotto</option>
+                  <option value="Mushroom Edamame Tortellini">
+                    Mushroom Edamame Tortellini
+                  </option>
+                  <option value="Szechuan Eggplant">Szechuan Eggplant</option>
                 </Select>
 
                 <Select
@@ -201,11 +232,23 @@ export default function Page() {
                   <option disabled selected hidden="true" value={""}>
                     DESSERT
                   </option>
-                  <option value="1">1</option>
+                  <option value="Vanilla Crème Brûlée">
+                    Vanilla Crème Brûlée
+                  </option>
+                  <option value="Banana Caramel Chocolate Tart">
+                    Banana Caramel Chocolate Tart
+                  </option>
+                  <option value="Baklava">Baklava</option>
                   <option disabled>VEGAN</option>
-                  <option value="2">2</option>
+                  <option value="Coconut Pannacotta">Coconut Pannacotta</option>
+                  <option value="Raspberry Tartlet">Raspberry Tartlet</option>
+                  <option value="Carrot Cake">Carrot Cake</option>
                 </Select>
 
+                <Text className={TextFont.className}>
+                  Kindly specify any food allergies or dietary restrictions. If
+                  none please note it in order to submit the form.
+                </Text>
                 <FullInput
                   required
                   value={notes}
@@ -223,9 +266,11 @@ export default function Page() {
                 />
 
                 <Text className={TextFont.className}>
-                  *We will provide bla bla bla
+                  We love a good party and nothing sets the tone better than
+                  some great tunes. Please help us in building the ultimate
+                  playlist and share a song suggestion below in order to
+                  complete & submit the form.
                 </Text>
-
                 <FullInput
                   value={song}
                   onChange={(e) => {
@@ -242,6 +287,11 @@ export default function Page() {
                   className={TextFont.className}
                 />
 
+                <Text className={TextFont.className}>
+                  Please make sure you see the Thank you message when pressing
+                  send to indicate it was successful. We look forward to
+                  celebrating our big day with you.
+                </Text>
                 <div style={{ width: "97%" }}>
                   <Go type="submit" className={TextFont.className}>
                     Send
@@ -271,7 +321,7 @@ const Option = styled.option`
 
 const Subcontainer = styled.div`
   width: 70%;
-  height: 85%;
+  height: 95%;
   background-color: white;
   position: relative;
   display: flex;
@@ -287,8 +337,9 @@ const Background = styled.div`
   border-radius: 5px;
   width: 50%;
   height: 100%;
-  background-image: url("/hero.jpg");
+  background-image: url("/3.jpeg");
   background-size: cover;
+  filter: grayscale(100%);
 
   @media (max-width: 768px) {
     display: none;
@@ -305,7 +356,8 @@ const FormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    background-image: url("/hero.jpg");
+    background-image: url("/1.jpeg");
+    filter: grayscale(100%);
     background-size: cover;
   }
 `;
@@ -315,7 +367,7 @@ const Menu = styled.a`
   position: absolute;
   letter-spacing: 1px;
   right: 30px;
-  bottom: 30px;
+  top: 25px;
   font-size: 13px;
   color: black;
   font-weight: bold;
@@ -363,13 +415,14 @@ const Form = styled.form`
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
 `;
 
 const Text = styled.div`
   width: 100%;
   margin-left: 10px;
+  font-size: 11px;
 `;
 
 const HalfInput = styled.input`
