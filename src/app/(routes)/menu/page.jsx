@@ -107,27 +107,42 @@ export default function Page() {
           <Background />
 
           <FormContainer>
-            <Menu
-              href="/pdf.pdf"
-              target="_blank"
-              className={TextFont.className}
-            >
-              MENU
-            </Menu>
             <Overlay />
             <FormSub>
-              <h2
-                style={{ alignSelf: "center", letterSpacing: "3px" }}
-                className={TextFont.className}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
               >
-                WE EAT
-              </h2>
-              <h4
-                style={{ alignSelf: "center" }}
-                className={TextFont.className}
-              >
-                Please complete by 16 February 2024.
-              </h4>
+                <h1
+                  style={{
+                    fontSize: "35px",
+                    alignSelf: "center",
+                    letterSpacing: "3px",
+                    margin: 0,
+                    padding: 0,
+                    fontWeight: "normal",
+                  }}
+                  className={HeadingFont.className}
+                >
+                  the
+                  <span
+                    className={TextFont.className}
+                    style={{ fontSize: "25px", fontWeight: "normal" }}
+                  >
+                    MENU
+                  </span>
+                </h1>
+
+                <h6
+                  style={{ alignSelf: "center" }}
+                  className={TextFont.className}
+                >
+                  Please complete by 16 February 2024.
+                </h6>
+              </div>
               <Form onSubmit={createTodo} className={HeadingFont.className}>
                 <HalfInput
                   value={name}
@@ -160,8 +175,11 @@ export default function Page() {
                   className={TextFont.className}
                 />
                 <Text className={TextFont.className}>
-                  Please select 1 option for each course below, see the menu for
-                  more details.
+                  Please select 1 option for each course below,{" "}
+                  <Click href="/pdf.pdf" target="_blank">
+                    Click here to see the menu
+                  </Click>{" "}
+                  for more details.
                 </Text>
                 <Select
                   value={starter}
@@ -182,9 +200,7 @@ export default function Page() {
                   <Option value="Smoked Springbok Carpaccio">
                     Smoked Springbok Carpaccio
                   </Option>
-                  <Option disabled style={{ color: "red" }}>
-                    VEGAN *
-                  </Option>
+                  <Option disabled>* VEGAN</Option>
                   <Option value="Candy Beetroot Salad">
                     Candy Beetroot Salad
                   </Option>
@@ -204,20 +220,20 @@ export default function Page() {
                   name="main"
                   required
                 >
-                  <option disabled selected value={""}>
+                  <Option selected value={""}>
                     MAIN
-                  </option>
-                  <option value="Braised Pork Belly">Braised Pork Belly</option>
-                  <option value="Karoo Lamb Chops">Karoo Lamb Chops</option>
-                  <option value="Elgin Chicken Supreme">
+                  </Option>
+                  <Option value="Braised Pork Belly">Braised Pork Belly</Option>
+                  <Option value="Karoo Lamb Chops">Karoo Lamb Chops</Option>
+                  <Option value="Elgin Chicken Supreme">
                     Elgin Chicken Supreme
-                  </option>
-                  <option disabled>VEGAN</option>
-                  <option value="Butternut Risotto">Butternut Risotto</option>
-                  <option value="Mushroom Edamame Tortellini">
+                  </Option>
+                  <Option disabled>* VEGAN</Option>
+                  <Option value="Butternut Risotto">Butternut Risotto</Option>
+                  <Option value="Mushroom Edamame Tortellini">
                     Mushroom Edamame Tortellini
-                  </option>
-                  <option value="Szechuan Eggplant">Szechuan Eggplant</option>
+                  </Option>
+                  <Option value="Szechuan Eggplant">Szechuan Eggplant</Option>
                 </Select>
 
                 <Select
@@ -229,20 +245,20 @@ export default function Page() {
                   name="dessert"
                   required
                 >
-                  <option disabled selected hidden="true" value={""}>
+                  <Option disabled selected hidden="true" value={""}>
                     DESSERT
-                  </option>
-                  <option value="Vanilla Crème Brûlée">
+                  </Option>
+                  <Option value="Vanilla Crème Brûlée">
                     Vanilla Crème Brûlée
-                  </option>
-                  <option value="Banana Caramel Chocolate Tart">
+                  </Option>
+                  <Option value="Banana Caramel Chocolate Tart">
                     Banana Caramel Chocolate Tart
-                  </option>
-                  <option value="Baklava">Baklava</option>
-                  <option disabled>VEGAN</option>
-                  <option value="Coconut Pannacotta">Coconut Pannacotta</option>
-                  <option value="Raspberry Tartlet">Raspberry Tartlet</option>
-                  <option value="Carrot Cake">Carrot Cake</option>
+                  </Option>
+                  <Option value="Baklava">Baklava</Option>
+                  <Option disabled>* VEGAN</Option>
+                  <Option value="Coconut Pannacotta">Coconut Pannacotta</Option>
+                  <Option value="Raspberry Tartlet">Raspberry Tartlet</Option>
+                  <Option value="Carrot Cake">Carrot Cake</Option>
                 </Select>
 
                 <Text className={TextFont.className}>
@@ -287,14 +303,19 @@ export default function Page() {
                   className={TextFont.className}
                 />
 
-                <Text className={TextFont.className}>
+                <Text
+                  className={TextFont.className}
+                  style={{ textAlign: "center" }}
+                >
                   Please make sure you see the Thank you message when pressing
-                  send to indicate it was successful. We look forward to
-                  celebrating our big day with you.
+                  send to indicate it was successful. <br />
+                  <strong>
+                    We look forward to celebrating our big day with you.
+                  </strong>
                 </Text>
                 <div style={{ width: "97%" }}>
                   <Go type="submit" className={TextFont.className}>
-                    Send
+                    SEND
                   </Go>
                 </div>
               </Form>
@@ -356,7 +377,7 @@ const FormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    background-image: url("/1.jpeg");
+    background-image: url("/3.jpeg");
     filter: grayscale(100%);
     background-size: cover;
   }
@@ -510,5 +531,13 @@ const Go = styled.button`
     color: white;
     border-bottom: none;
     border: 2px solid white;
+  }
+`;
+
+const Click = styled.a`
+  color: black;
+
+  @media (max-width: 768px) {
+    color: white;
   }
 `;
