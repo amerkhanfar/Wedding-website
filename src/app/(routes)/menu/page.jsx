@@ -220,7 +220,7 @@ export default function Page() {
                   name="main"
                   required
                 >
-                  <Option selected value={""}>
+                  <Option disabled selected value={""}>
                     MAIN
                   </Option>
                   <Option value="Braised Pork Belly">Braised Pork Belly</Option>
