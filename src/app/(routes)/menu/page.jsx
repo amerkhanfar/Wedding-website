@@ -140,7 +140,7 @@ export default function Page() {
                   style={{ alignSelf: "center" }}
                   className={TextFont.className}
                 >
-                  Please complete by 16 February 2024.
+                  Please complete by 23 February 2024.
                 </h6>
               </div>
               <Form onSubmit={createTodo} className={HeadingFont.className}>
